@@ -1,0 +1,5 @@
+PacRolling: https://freesound.org/people/Department64/sounds/608126/
+Locking: https://samplefocus.com/samples/lock-load-reload
+Shooting: https://samplefocus.com/samples/lock-load-gun-shot-muffled
+Pellet: https://samplefocus.com/samples/lock-load-reload-2
+Menu music: https://freesound.org/people/zagi2/sounds/203338/
