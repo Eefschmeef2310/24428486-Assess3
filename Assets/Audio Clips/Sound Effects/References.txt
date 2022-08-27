@@ -2,4 +2,7 @@ PacRolling: https://freesound.org/people/Department64/sounds/608126/
 Locking: https://samplefocus.com/samples/lock-load-reload
 Shooting: https://samplefocus.com/samples/lock-load-gun-shot-muffled
 Pellet: https://samplefocus.com/samples/lock-load-reload-2
-Menu music: https://freesound.org/people/zagi2/sounds/203338/
+Main music: https://freesound.org/people/zagi2/sounds/203338/
+Starting Music: https://www.youtube.com/watch?v=VY58inWev0E&ab_channel=Supercalifragilisticexpialidocious
+Dead ghost: https://www.youtube.com/watch?v=qS9MstaEEPc&ab_channel=GamingFX
+Power Pellet: https://www.youtube.com/watch?v=GWXLPu8Ky9k&t=1s&ab_channel=TheMSsoundeffects
