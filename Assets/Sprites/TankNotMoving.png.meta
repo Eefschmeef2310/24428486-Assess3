@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0a08fb959d350c14a809e3d45b26e6f4
+guid: 3a816ebfa92cced40b7b1c3799656066
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,64 +106,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel_0
+      name: TankNotMoving_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00a696bb5dd80041a054b529fc86d2f
+      internalID: 1185872406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankNotMoving_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 13
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a232a8975066d40a6490d0ff0545d7
+      internalID: -1151305389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankNotMoving_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 13
         height: 13
-      alignment: 9
-      pivot: {x: 0, y: 13}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a855a24b49a2474f8db9793f518cecc
-      internalID: 2134963350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Piskel_1
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 0
-        width: 13
-        height: 13
-      alignment: 9
-      pivot: {x: 0, y: 13}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfb17a75bc366ee45b54210769e6044e
-      internalID: 1552731392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Piskel_2
-      rect:
-        serializedVersion: 2
-        x: 26
-        y: 0
-        width: 13
-        height: 13
-      alignment: 9
-      pivot: {x: 0, y: 13}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79f86deebe4a16c41b139980d45f6053
-      internalID: -455055504
+      spriteID: c9676e795c5a30342a98bba6d4ab071b
+      internalID: -313161978
       vertices: []
       indices: 
       edges: []
@@ -179,9 +179,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      New Piskel_2: -455055504
-      New Piskel_1: 1552731392
-      New Piskel_0: 2134963350
+      TankNotMoving_1: -1151305389
+      TankNotMoving_0: 1185872406
+      TankNotMoving_2: -313161978
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
