@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class TrailMoveTest : MonoBehaviour
+public class GhostMove : MonoBehaviour
 {
-    public Animator animator;
     public float speed;
 
     // Update is called once per frame

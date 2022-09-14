@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: New Piskel_1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -2130845392, guid: 986d8a0c51baa40409a303a65d247536, type: 3}
+  m_Sprite: {fileID: 1802083687, guid: b11e3d6a6aa13d9419a4a7cb1fa489a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

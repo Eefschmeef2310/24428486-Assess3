@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dce5f53903617074e8ea877263dfcb9e
+guid: 752c2ad8855e5a346b08067b0c1c1854
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pilot_0
+      name: Pilot (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -120,14 +120,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54bbb4d0f71dc7745a3c88147fd286fb
-      internalID: 1912706704
+      spriteID: 69a9f624cdd0bfd459bd7c8a82d85b8f
+      internalID: 924823083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pilot_1
+      name: Pilot (1)_1
       rect:
         serializedVersion: 2
         x: 14
@@ -141,14 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5174d765b7be2e42aad9cae0b21ca8a
-      internalID: 198784267
+      spriteID: 3eff2f10a66b23a46a857cf5713fd928
+      internalID: 1829177972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pilot_2
+      name: Pilot (1)_2
       rect:
         serializedVersion: 2
         x: 0
@@ -162,8 +162,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1607e7543876b8644ba3a0cbcf665fcb
-      internalID: 1461529030
+      spriteID: 1abceb230b0c5be4a9a23b293ffa82b0
+      internalID: 386306164
       vertices: []
       indices: 
       edges: []
@@ -179,9 +179,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pilot_0: 1912706704
-      Pilot_1: 198784267
-      Pilot_2: 1461529030
+      Pilot (1)_1: 1829177972
+      Pilot (1)_2: 386306164
+      Pilot (1)_0: 924823083
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
