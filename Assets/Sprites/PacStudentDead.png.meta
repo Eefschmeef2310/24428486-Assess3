@@ -106,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TankMoving 1_0
+      name: PacStudentDead_0
       rect:
         serializedVersion: 2
         x: 0
@@ -120,14 +120,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbbf7cd2c1a2b88418e2b8a8016525cf
-      internalID: 81673694
+      spriteID: 1aa75750592c2f640a046637ebaf1a71
+      internalID: 1329648550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TankMoving 1_1
+      name: PacStudentDead_1
       rect:
         serializedVersion: 2
         x: 13
@@ -141,14 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb16b344ed4bbc540bd088c019fd8ec9
-      internalID: 275442420
+      spriteID: cdebcbb18a404224da68ede44ca4bb68
+      internalID: -1487978239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TankMoving 1_2
+      name: PacStudentDead_2
       rect:
         serializedVersion: 2
         x: 26
@@ -162,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fcb74818f3d4f54596f8f7a24ecbdba
-      internalID: -1122319966
+      spriteID: 1572572d54f7dd1488f3a01422196b41
+      internalID: 1348983442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TankMoving 1_3
+      name: PacStudentDead_3
       rect:
         serializedVersion: 2
         x: 39
@@ -183,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ecda36ac2828554e94f178fe7eb2111
-      internalID: -435676124
+      spriteID: ac587e9624bff4b4797c839066cd52e1
+      internalID: -137170867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TankMoving 1_4
+      name: PacStudentDead_4
       rect:
         serializedVersion: 2
         x: 0
@@ -204,14 +204,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2078e9f388ae8c84195f9f28c4db672d
-      internalID: 1817370995
+      spriteID: 89501fd894fdae54b993dc361c095293
+      internalID: -1531004113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TankMoving 1_5
+      name: PacStudentDead_5
       rect:
         serializedVersion: 2
         x: 13
@@ -225,14 +225,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0564e711ff35d9745824d5ed816a0419
-      internalID: -1505833482
+      spriteID: 1c6d0add78e10334fa470c1c89662063
+      internalID: 643553553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TankMoving 1_6
+      name: PacStudentDead_6
       rect:
         serializedVersion: 2
         x: 26
@@ -246,14 +246,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db8efc4e4c477814f8c4290a1e928658
-      internalID: -1525835937
+      spriteID: b2142204c61509046a824dffe9f47bac
+      internalID: 869538003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TankMoving 1_7
+      name: PacStudentDead_7
       rect:
         serializedVersion: 2
         x: 39
@@ -267,14 +267,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e450595ff5cd1cb47b6d50839ed20536
-      internalID: 489395667
+      spriteID: 44953da92a3f0bc4491c3e6de6ccc302
+      internalID: 277807020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TankMoving 1_8
+      name: PacStudentDead_8
       rect:
         serializedVersion: 2
         x: 0
@@ -288,14 +288,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c02c3df34019144478c552e5aa6506a3
-      internalID: 1922125593
+      spriteID: be7c5372e16de9e44a25cf3373515d20
+      internalID: 1523836530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TankMoving 1_9
+      name: PacStudentDead_9
       rect:
         serializedVersion: 2
         x: 13
@@ -309,14 +309,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a454532a92280341bd2e9a6283abf32
-      internalID: -2015908001
+      spriteID: a9f7edbea4a76b140bf9586aad079577
+      internalID: 257174962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TankMoving 1_10
+      name: PacStudentDead_10
       rect:
         serializedVersion: 2
         x: 26
@@ -330,14 +330,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66042febc784dc24a98417e92c987219
-      internalID: -1963235278
+      spriteID: d85f31294d7118943bf92de91baf1eba
+      internalID: 8099027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TankMoving 1_11
+      name: PacStudentDead_11
       rect:
         serializedVersion: 2
         x: 39
@@ -351,14 +351,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99409f4dab9623f45b4d0a9e64bd9b61
-      internalID: -588532408
+      spriteID: 3c41853355337444fb3c7b06e4a500d6
+      internalID: 1018056063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TankMoving 1_12
+      name: PacStudentDead_12
       rect:
         serializedVersion: 2
         x: 0
@@ -372,8 +372,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f233593cc7a5de74e9d5b2c1dc34fbda
-      internalID: -1971079708
+      spriteID: d58880c93ad4e344ea2c35f1b92c64ab
+      internalID: 791985111
       vertices: []
       indices: 
       edges: []
@@ -389,19 +389,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TankMoving 1_2: -1122319966
-      TankMoving 1_6: -1525835937
-      TankMoving 1_8: 1922125593
-      TankMoving 1_4: 1817370995
-      TankMoving 1_12: -1971079708
-      TankMoving 1_11: -588532408
-      TankMoving 1_1: 275442420
-      TankMoving 1_5: -1505833482
-      TankMoving 1_10: -1963235278
-      TankMoving 1_3: -435676124
-      TankMoving 1_9: -2015908001
-      TankMoving 1_0: 81673694
-      TankMoving 1_7: 489395667
+      PacStudentDead_12: 791985111
+      PacStudentDead_2: 1348983442
+      PacStudentDead_3: -137170867
+      PacStudentDead_4: -1531004113
+      PacStudentDead_1: -1487978239
+      PacStudentDead_9: 257174962
+      PacStudentDead_5: 643553553
+      PacStudentDead_10: 8099027
+      PacStudentDead_7: 277807020
+      PacStudentDead_6: 869538003
+      PacStudentDead_0: 1329648550
+      PacStudentDead_8: 1523836530
+      PacStudentDead_11: 1018056063
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
