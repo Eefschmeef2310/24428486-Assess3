@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: PowerPellet
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 727274335, guid: b11e3d6a6aa13d9419a4a7cb1fa489a4, type: 3}
+  m_DefaultSprite: {fileID: 0}
   m_DefaultGameObject: {fileID: 1669932672670527720, guid: 69a39abd120ab984bad2e486b8b3e2a5, type: 3}
   m_DefaultColliderType: 1
   m_TilingRules: []
