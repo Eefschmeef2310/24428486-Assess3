@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2548896004394318667, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2548896004394318667, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42,15 +42,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2548896004394318667, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2548896004394318667, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2548896004394318667, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2548896004394318667, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -66,7 +66,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2548896004394318679, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
       propertyPath: m_Name
-      value: Red
+      value: Red Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649562349002587048, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
+      propertyPath: m_Text
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427702685502688369, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
+      propertyPath: m_Name
+      value: Ghost2Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376864661825467808, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376864661825467808, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376864661825467808, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
