@@ -19,7 +19,7 @@ public class TankMove : MonoBehaviour
         {
             target = changeTarget();
         }
-        transform.position = Vector3.MoveTowards(transform.position, target, (speed) * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
     }
 
     private Vector3 changeTarget()
