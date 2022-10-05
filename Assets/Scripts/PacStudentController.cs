@@ -43,10 +43,11 @@ public class PacStudentController : MonoBehaviour
         //when the player reaches the next tile, check if lastInput is a vlid tile to move to. If so, update target, so the player moves there
         if(transform.position == target)
         {
-            Vector3Int nextPos = new Vector3Int((int)transform.position.x, (int)transform.position.y + lastInput.y);
+            Vector3Int nextPos = new Vector3Int((int)target.x + lastInput.x, (int)target.y + lastInput.y);
+            Debug.Log(nextPos);
             if(tilemap.GetTile(nextPos) == null || tilemap.GetTile(nextPos).name == "Pellet" || tilemap.GetTile(nextPos).name == "PowerPellet") //tile in direction is valid
             {
-                target = transform.position + lastInput;
+                target += lastInput;
             }
         }
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
