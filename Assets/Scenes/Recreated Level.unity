@@ -1204,7 +1204,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1691981102}
+  animator: {fileID: 979542084}
   speed: 1
+--- !u!95 &979542084 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 435129514038875765, guid: a644c9836c4e2384390d961ffcf06829, type: 3}
+  m_PrefabInstance: {fileID: 435129513136138078}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1054987412
 PrefabInstance:
   m_ObjectHideFlags: 0
