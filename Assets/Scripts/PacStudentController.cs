@@ -9,6 +9,9 @@ public class PacStudentController : MonoBehaviour
     Vector3Int movingDirection = Vector3Int.right;
     public Tilemap tilemap;
     public Animator animator;
+    public GameObject smokes;
+    public AudioSource audioSource;
+    public List<AudioClip> audioClips;
 
     Vector3 currentInput;
     public float speed;
@@ -54,15 +57,35 @@ public class PacStudentController : MonoBehaviour
             }
             else
             {
-                nextPos = new Vector3Int((int)(currentInput.x - 0.5f) + movingDirection.x, (int)(currentInput.y - 0.5f) + movingDirection.y);
+                nextPos = new Vector3Int((int)(currentInput.x - 0.5f) + movingDirection.x, (int)(currentInput.y - 0.5f) + movingDirection.y); //this time, check if tile in direction of travel is valid
                 if(tilemap.GetTile(nextPos) == null || tilemap.GetTile(nextPos).name == "Pellet" || tilemap.GetTile(nextPos).name == "PowerPellet") //tile in direction is valid
                 {
-                    currentInput += movingDirection;
+                    currentInput += movingDirection; //"KEEP MOVING FORWARD" (Meet The Robinsons, 2007)
+                }
+                else
+                {
+                    animator.speed = 0;
+                    smokes.SetActive(false);
+
+
+                    /*
+                    audioSource.clip = audioClips[1];
+                    audioSource.loop = false;
+                    audioSource.Play();
+                    */
                 }
             }
         }
         else
         {
+            animator.speed = 1;
+            smokes.SetActive(true);
+
+            /*
+            audioSource.clip = audioClips[0];
+            audioSource.loop = true;
+            */
+
             if(movingDirection == Vector3Int.up)
             {
                 animator.Play("Up", 1);
