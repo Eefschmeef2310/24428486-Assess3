@@ -14,6 +14,7 @@ public class PacStudentController : MonoBehaviour
     public List<AudioClip> audioClips;
 
     Vector3 currentInput;
+    bool isMoving = true;
     public float speed;
 
     void Start()
@@ -46,7 +47,7 @@ public class PacStudentController : MonoBehaviour
         }
 
         //when the player reaches the next tile, check if lastInput is a valid tile to move to. If so, update target, so the player moves there
-        if(transform.position == currentInput)
+        if(transform.position == currentInput && isMoving)
         {
             Vector3Int nextPos = new Vector3Int((int)(currentInput.x - 0.5f) + lastInput.x, (int)(currentInput.y - 0.5f) + lastInput.y);
             //Debug.Log(nextPos);
@@ -62,29 +63,22 @@ public class PacStudentController : MonoBehaviour
                 {
                     currentInput += movingDirection; //"KEEP MOVING FORWARD" (Meet The Robinsons, 2007)
                 }
-                else
+                else // player must stop
                 {
+                    isMoving = false;
                     animator.speed = 0;
                     smokes.SetActive(false);
 
-
-                    /*
                     audioSource.clip = audioClips[1];
                     audioSource.loop = false;
                     audioSource.Play();
-                    */
                 }
             }
         }
-        else
+        else if (isMoving)
         {
             animator.speed = 1;
             smokes.SetActive(true);
-
-            /*
-            audioSource.clip = audioClips[0];
-            audioSource.loop = true;
-            */
 
             if(movingDirection == Vector3Int.up)
             {
@@ -104,6 +98,13 @@ public class PacStudentController : MonoBehaviour
             }
             transform.position = Vector3.MoveTowards(transform.position, currentInput, speed * Time.deltaTime);
         }
-        //animator.Play("Right", 1);
+        else if (movingDirection != lastInput)
+        {
+            isMoving = true;
+
+            audioSource.clip = audioClips[0];
+            audioSource.loop = true;
+            audioSource.Play();
+        }
     }
 }

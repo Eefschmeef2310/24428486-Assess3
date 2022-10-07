@@ -5033,7 +5033,7 @@ MonoBehaviour:
   tilemap: {fileID: 0}
   animator: {fileID: 4009403194080247636}
   smokes: {fileID: 8095447815271962339}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 7409653574690296371}
   audioClips: []
   speed: 1
 --- !u!1 &4134327739689881520
