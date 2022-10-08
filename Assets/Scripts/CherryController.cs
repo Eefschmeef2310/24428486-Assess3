@@ -6,40 +6,57 @@ public class CherryController : MonoBehaviour
 {
     public float movementSpeed = 1.0f;
     Vector3 spawnPos;
+    public SpriteRenderer spriteRenderer;
 
-    // Start is called before the first frame update
     void Start()
     {
-        spawnPos.y = Random.Range(-18.5f, 18.5f);
-        if(spawnPos.y == -18.5f || spawnPos.y == 18.5f)
+        if(spriteRenderer.enabled == false)
         {
-            spawnPos.x = Random.Range(-32.5f, 32.5f);
+            InvokeRepeating("spawnCherry", 10, 10);
         }
-        else
+
+        spawnPos = transform.position;
+    }
+
+    void Update()
+    {
+        if(spriteRenderer.enabled == true) //all cloned cherries will have an active sprite renderer, while the base cherry won't
         {
-            if(Random.value<0.5f)
+            if(transform.position != -spawnPos)
             {
-                spawnPos.x  = -32.5f;
+                transform.position = Vector3.MoveTowards(transform.position, -spawnPos, movementSpeed * Time.deltaTime);
             }
             else
             {
-                spawnPos.x = 32.5f;
+                Destroy(gameObject);
             }
         }
-        transform.position = new Vector3(spawnPos.x, spawnPos.y);
     }
 
-    // Update is called once per frame
-    void Update()
+    void spawnCherry()
     {
-        if(transform.position != -spawnPos)
+        Vector3 position = Vector3.zero;
+
+        switch(Random.Range(0,4)) //randomly pick a side, then spawn a cherry at a random spot along that axis
         {
-            transform.position = Vector3.MoveTowards(transform.position, -spawnPos, movementSpeed * Time.deltaTime);
+            case 0: //top
+                position = new Vector3(Random.Range(-32.5f, 32.5f), 18.5f);
+                break;
+            case 1: //bottom
+                position = new Vector3(Random.Range(-32.5f, 32.5f), -18.5f);
+                break;
+            case 2: //left
+                position = new Vector3(-32.5f, Random.Range(-18.5f, 18.5f));
+                break;
+            case 3: //right
+                position = new Vector3(32.5f, Random.Range(-18.5f, 18.5f));
+                break;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-        
+
+        spawnPos = position;
+
+        spriteRenderer.enabled = true;
+        Instantiate(gameObject, position, Quaternion.identity);
+        spriteRenderer.enabled = false;
     }
 }
