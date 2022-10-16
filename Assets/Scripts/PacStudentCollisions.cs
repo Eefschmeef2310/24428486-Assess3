@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class PacStudentCollisions : MonoBehaviour
 {
@@ -10,14 +11,12 @@ public class PacStudentCollisions : MonoBehaviour
     public Transform ghosts;
     public Stats stats;
     public Animator animator;
-    public AudioPlayer backgroundMusic;
-    public AudioSource backgroundPlayer;
+    public AudioSource backgroundMusic;
     public AudioSource audioSource;
     public AudioClip deathSound;
-    public Sprite defaultSprite;
-    public Countdown countdown;
-    public List<Image> images;
-    int lives = 3;
+    public Lives lives;
+    public GameObject map;
+    GameObject newMap;
     private void OnTriggerEnter2D(Collider2D collider)
     {
         switch(collider.gameObject.tag)
@@ -78,11 +77,24 @@ public class PacStudentCollisions : MonoBehaviour
         Destroy(collider2D.gameObject);
         stats.UpdateScore(amount);
     }
+    void Start()
+    {
+        if(GameObject.FindGameObjectWithTag("newMap") != null)
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Map"));
+            map = GameObject.FindGameObjectWithTag("newMap");
+            map.tag = "Map";
+            pacStudentController.tilemap = map.transform.GetChild(0).GetComponent<Tilemap>();
+        }
+    }
 
     IEnumerator deadPlayer()
     {
+        DontDestroyOnLoad(map);
+        map.tag = "newMap";
+
         audioSource.Stop();
-        backgroundPlayer.enabled = false;
+        backgroundMusic.Stop();
 
         pacStudentController.enabled = false; //stop movement
 
@@ -102,36 +114,20 @@ public class PacStudentCollisions : MonoBehaviour
         audioSource.Play();
         animator.Play("PacDeath", 0);
 
-        switch(lives)
+        if(PlayerPrefs.GetInt("Lives") - 1 == 0)
         {
-            case 3:
-                lives--;
-                images[2].enabled = false;
-                break;
-            case 2:
-                lives--;
-                images[1].enabled = false;
-                break;
-            case 1:
-                lives--;
-                images[0].enabled = false;
-                break;
-            case 0:
-                Debug.Log("player is dead");
-                break;
-        }
-        yield return new WaitForSeconds(animator.runtimeAnimatorController.animationClips[5].length);
-
-        if(lives != 0)
-        {
-            resetLevel();
+            Debug.Log("Game Over!");
+            lives.UpdateLives();
         }
         else
         {
-            Debug.Log("Game Over");
+            lives.UpdateLives();
         }
+        yield return new WaitForSeconds(animator.runtimeAnimatorController.animationClips[5].length);
+        SceneManager.LoadScene(1);
     }
 
+    /*
     void resetLevel()
     {
         transform.position = new Vector3(-12.5f, 13.5f);
@@ -153,6 +149,7 @@ public class PacStudentCollisions : MonoBehaviour
         backgroundMusic.Start();
         countdown.Start();
     }
+    */
 
     IEnumerator deadGhost(Collider2D collider)
     {
@@ -162,9 +159,9 @@ public class PacStudentCollisions : MonoBehaviour
         Time.timeScale = 1;
 
         audioSource.enabled = true;
-        backgroundPlayer.loop = true;
-        backgroundPlayer.clip = backgroundMusic.clips[3];
-        backgroundPlayer.Play();
+        backgroundMusic.loop = true;
+        backgroundMusic.clip = backgroundMusic.GetComponent<AudioPlayer>().clips[3];
+        backgroundMusic.Play();
 
         ScareManager scareManager = collider.GetComponent<ScareManager>();
 

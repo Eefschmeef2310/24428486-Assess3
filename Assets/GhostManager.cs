@@ -7,7 +7,7 @@ public class GhostManager : MonoBehaviour
 {
     public bool scared = false;
     public TextMeshProUGUI ghostTimer;
-    public AudioPlayer backgroundMusic;
+    public AudioSource backgroundMusic;
     public void powerPellet()
     {
         scared = true;
@@ -22,8 +22,8 @@ public class GhostManager : MonoBehaviour
     IEnumerator scaredGhosts()
     {
         ghostTimer.gameObject.SetActive(true);
-        backgroundMusic.audioSource.clip = backgroundMusic.clips[2];
-        backgroundMusic.audioSource.Play();
+        backgroundMusic.clip = backgroundMusic.GetComponent<AudioPlayer>().clips[2];
+        backgroundMusic.Play();
 
         for(int i = 10; i > 3; i--)
         {
@@ -48,8 +48,8 @@ public class GhostManager : MonoBehaviour
         scared = false;
         ghostTimer.gameObject.SetActive(false);
 
-        backgroundMusic.audioSource.loop = true;
-        backgroundMusic.audioSource.clip = backgroundMusic.clips[1];
-        backgroundMusic.audioSource.Play();
+        backgroundMusic.loop = true;
+        backgroundMusic.clip = backgroundMusic.GetComponent<AudioPlayer>().clips[1];
+        backgroundMusic.Play();
     }
 }

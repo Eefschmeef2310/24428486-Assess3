@@ -431,7 +431,7 @@ Transform:
   - {fileID: 1691981100}
   - {fileID: 743657481}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &276385927 stripped
 Transform:
@@ -997,17 +997,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &642433204 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8133055687443463317, guid: 5809ba49e2310d843baf4511d4cbf5c1, type: 3}
-  m_PrefabInstance: {fileID: 208580489}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac684b7cc6cf28545897c980421d09a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &650940916 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5003650544667326892, guid: c9074882630c7644d917afe472c77ea4, type: 3}
@@ -2171,16 +2160,11 @@ MonoBehaviour:
   ghosts: {fileID: 2056739045}
   stats: {fileID: 1943172666}
   animator: {fileID: 4009403192968203904}
-  backgroundMusic: {fileID: 642433204}
-  backgroundPlayer: {fileID: 2094472969}
+  backgroundMusic: {fileID: 0}
   audioSource: {fileID: 1576061890}
   deathSound: {fileID: 8300000, guid: 1b7323dc2e445e24db342c39c6962ca0, type: 3}
-  defaultSprite: {fileID: -574672907, guid: da257eac352ea754db5eb35643700a77, type: 3}
-  countdown: {fileID: 0}
-  images:
-  - {fileID: 1679156805}
-  - {fileID: 1141421270}
-  - {fileID: 153338764}
+  lives: {fileID: 1943172670}
+  map: {fileID: 241833245}
 --- !u!50 &1576061897
 Rigidbody2D:
   serializedVersion: 4
@@ -9238,6 +9222,7 @@ GameObject:
   - component: {fileID: 1943172666}
   - component: {fileID: 1943172668}
   - component: {fileID: 1943172669}
+  - component: {fileID: 1943172670}
   m_Layer: 0
   m_Name: HUD Manager
   m_TagString: Untagged
@@ -9300,6 +9285,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 338480152}
+--- !u!114 &1943172670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943172665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0581e055eb1ee54e9688d0159db4da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images: []
+  lives: 0
 --- !u!1 &2056739043
 GameObject:
   m_ObjectHideFlags: 0
@@ -9331,7 +9330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scared: 0
   ghostTimer: {fileID: 1484187878}
-  backgroundMusic: {fileID: 642433204}
+  backgroundMusic: {fileID: 0}
 --- !u!4 &2056739045
 Transform:
   m_ObjectHideFlags: 0
@@ -9351,11 +9350,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &2094472969 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5558948359714291862, guid: 5809ba49e2310d843baf4511d4cbf5c1, type: 3}
-  m_PrefabInstance: {fileID: 208580489}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2126943429
 GameObject:
   m_ObjectHideFlags: 0
@@ -9491,7 +9485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4009403194080247637, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4009403194080247637, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: m_LocalPosition.x
