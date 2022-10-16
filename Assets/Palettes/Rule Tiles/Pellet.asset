@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Pellet
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 0}
-  m_DefaultGameObject: {fileID: 1669932672670527720, guid: 69a39abd120ab984bad2e486b8b3e2a5, type: 3}
+  m_DefaultGameObject: {fileID: 7333655600605724981, guid: cb47d8ba0c1921a4e9c9a5a843402e63, type: 3}
   m_DefaultColliderType: 1
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: -1823259391, guid: 5a1ca23f5ac26c74da49258fa3810219, type: 3}
-    m_GameObject: {fileID: 0}
+    - {fileID: 0}
+    m_GameObject: {fileID: 7333655600605724981, guid: cb47d8ba0c1921a4e9c9a5a843402e63, type: 3}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
     m_PerlinScale: 0.5

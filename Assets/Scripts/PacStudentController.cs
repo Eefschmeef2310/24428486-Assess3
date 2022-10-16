@@ -5,52 +5,60 @@ using UnityEngine.Tilemaps;
 
 public class PacStudentController : MonoBehaviour
 {
-    Vector3Int lastInput = Vector3Int.right; //Vector3.*direction* will be used.
-    Vector3Int movingDirection = Vector3Int.right;
+    Vector3Int lastInput; //Vector3.*direction* will be used.
+    Vector3Int movingDirection;
     public Tilemap tilemap;
     public Animator animator;
     public GameObject smokes;
     public AudioSource audioSource;
     public List<AudioClip> audioClips;
 
-    Vector3 currentInput;
-    bool isMoving = true;
+    [HideInInspector] public Vector3 currentInput;
+    bool isMoving = false;
     public float speed;
 
-    void Start()
+    public void Start()
     {
-        currentInput = transform.position + lastInput;
+        currentInput = transform.position;
+        lastInput = Vector3Int.zero;
     }
 
     void Update()
     {
+        if(Input.anyKeyDown && !smokes.activeSelf && !animator.isActiveAndEnabled && !audioSource.isActiveAndEnabled)
+        {
+            smokes.SetActive(true);
+            animator.enabled = true;
+            animator.speed = 1;
+            animator.Play("Rolling", 0);
+
+            audioSource.enabled = true;
+            audioSource.loop = true;
+            audioSource.clip = audioClips[0];
+            audioSource.Play();
+        }
         //Get inputs and update lastInput
         if(Input.GetKeyDown(KeyCode.W))
         {
             lastInput = Vector3Int.up;
-            //Debug.Log("W");
         }
         else if(Input.GetKeyDown(KeyCode.A))
         {
             lastInput = Vector3Int.left;
-            //Debug.Log("A");
         }
         else if(Input.GetKeyDown(KeyCode.S))
         {
             lastInput = Vector3Int.down;
-            //Debug.Log("S");
         }
         else if(Input.GetKeyDown(KeyCode.D))
         {
             lastInput = Vector3Int.right;
-            //Debug.Log("D");
         }
 
         //when the player reaches the next tile, check if lastInput is a valid tile to move to. If so, update target, so the player moves there
         if(transform.position == currentInput && isMoving)
         {
             Vector3Int nextPos = new Vector3Int((int)(currentInput.x - 0.5f) + lastInput.x, (int)(currentInput.y - 0.5f) + lastInput.y);
-            //Debug.Log(nextPos);
             if(tilemap.GetTile(nextPos) == null || tilemap.GetTile(nextPos).name == "Pellet" || tilemap.GetTile(nextPos).name == "PowerPellet") //tile in direction is valid
             {
                 currentInput += lastInput;
