@@ -6,15 +6,10 @@ using UnityEngine.UI;
 public class Lives : MonoBehaviour
 {
     public List<Image> images;
-    public int lives;
     // Start is called before the first frame update
     void Start()
     {
-        if(GameObject.FindGameObjectWithTag("newMap") == null) //first play
-        {
-            lives = 3;
-            PlayerPrefs.SetInt("Lives", lives);
-        }
+        //DontDestroyOnLoad(gameObject);
         UpdateLives();
     }
 
@@ -22,24 +17,32 @@ public class Lives : MonoBehaviour
     {
         switch(PlayerPrefs.GetInt("Lives"))
         {
-            case 3:
+            case 2:
                 images[2].enabled = false;
                 break;
-            case 2:
+            case 1:
+                images[2].enabled = false;
                 images[1].enabled = false;
                 break;
-            case 1:
+            case 0:
+                images[2].enabled = false;
+                images[1].enabled = false;
                 images[0].enabled = false;
+                break;
+            default:
+                PlayerPrefs.SetInt("Lives", 3);
                 break;
         }
     }
 
     public void RemoveLife()
     {
-        PlayerPrefs.SetInt("Lives", lives - 1);
+        PlayerPrefs.SetInt("Lives", PlayerPrefs.GetInt("Lives") - 1);
+        UpdateLives();
         if(PlayerPrefs.GetInt("Lives") == 0)
         {
             Debug.Log("Game Over!");
         }
+        
     }
 }

@@ -9,7 +9,7 @@ public class PacStudentCollisions : MonoBehaviour
 {
     public PacStudentController pacStudentController;
     public Transform ghosts;
-    public Stats stats;
+    public Score stats;
     public Animator animator;
     public AudioSource backgroundMusic;
     public AudioSource audioSource;

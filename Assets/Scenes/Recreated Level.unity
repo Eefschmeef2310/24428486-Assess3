@@ -9245,7 +9245,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1943172665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 920ff41156ffcc947a278fc90630bb1e, type: 3}
+  m_Script: {fileID: 11500000, guid: db41fab3dddf0ef4ab64660f22839891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
@@ -9307,7 +9307,6 @@ MonoBehaviour:
   - {fileID: 1679156805}
   - {fileID: 1141421270}
   - {fileID: 153338764}
-  lives: 0
 --- !u!1 &2056739043
 GameObject:
   m_ObjectHideFlags: 0

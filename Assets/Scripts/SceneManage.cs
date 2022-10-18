@@ -8,6 +8,7 @@ public class SceneManage : MonoBehaviour
     public void Level1()
     {
         SceneManager.LoadScene(1);
+        PlayerPrefs.SetInt("Lives", 3);
     }
 
     public void Level2()
