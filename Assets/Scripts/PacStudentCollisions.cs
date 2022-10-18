@@ -16,6 +16,7 @@ public class PacStudentCollisions : MonoBehaviour
     public AudioClip deathSound;
     public Lives lives;
     public GameObject map;
+    public Timer timer;
     GameObject newMap;
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -95,6 +96,7 @@ public class PacStudentCollisions : MonoBehaviour
 
         audioSource.Stop();
         backgroundMusic.Stop();
+        timer.enabled = false;
 
         pacStudentController.enabled = false; //stop movement
 
@@ -114,15 +116,7 @@ public class PacStudentCollisions : MonoBehaviour
         audioSource.Play();
         animator.Play("PacDeath", 0);
 
-        if(PlayerPrefs.GetInt("Lives") - 1 == 0)
-        {
-            Debug.Log("Game Over!");
-            lives.UpdateLives();
-        }
-        else
-        {
-            lives.UpdateLives();
-        }
+        lives.RemoveLife();
         yield return new WaitForSeconds(animator.runtimeAnimatorController.animationClips[5].length);
         SceneManager.LoadScene(1);
     }

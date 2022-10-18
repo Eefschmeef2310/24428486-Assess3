@@ -433,6 +433,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &263536591 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5558948359714291862, guid: 5809ba49e2310d843baf4511d4cbf5c1, type: 3}
+  m_PrefabInstance: {fileID: 208580489}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &276385927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6787919007617123910, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
@@ -2160,11 +2165,12 @@ MonoBehaviour:
   ghosts: {fileID: 2056739045}
   stats: {fileID: 1943172666}
   animator: {fileID: 4009403192968203904}
-  backgroundMusic: {fileID: 0}
+  backgroundMusic: {fileID: 263536591}
   audioSource: {fileID: 1576061890}
   deathSound: {fileID: 8300000, guid: 1b7323dc2e445e24db342c39c6962ca0, type: 3}
   lives: {fileID: 1943172670}
   map: {fileID: 241833245}
+  timer: {fileID: 1943172668}
 --- !u!50 &1576061897
 Rigidbody2D:
   serializedVersion: 4
@@ -9297,7 +9303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0581e055eb1ee54e9688d0159db4da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  images: []
+  images:
+  - {fileID: 1679156805}
+  - {fileID: 1141421270}
+  - {fileID: 153338764}
   lives: 0
 --- !u!1 &2056739043
 GameObject:
@@ -9330,7 +9339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scared: 0
   ghostTimer: {fileID: 1484187878}
-  backgroundMusic: {fileID: 0}
+  backgroundMusic: {fileID: 263536591}
 --- !u!4 &2056739045
 Transform:
   m_ObjectHideFlags: 0

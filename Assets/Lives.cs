@@ -15,24 +15,31 @@ public class Lives : MonoBehaviour
             lives = 3;
             PlayerPrefs.SetInt("Lives", lives);
         }
+        UpdateLives();
     }
 
     public void UpdateLives()
     {
-        switch(lives)
+        switch(PlayerPrefs.GetInt("Lives"))
         {
             case 3:
-                lives--;
                 images[2].enabled = false;
                 break;
             case 2:
-                lives--;
                 images[1].enabled = false;
                 break;
             case 1:
-                lives--;
                 images[0].enabled = false;
                 break;
+        }
+    }
+
+    public void RemoveLife()
+    {
+        PlayerPrefs.SetInt("Lives", lives - 1);
+        if(PlayerPrefs.GetInt("Lives") == 0)
+        {
+            Debug.Log("Game Over!");
         }
     }
 }
