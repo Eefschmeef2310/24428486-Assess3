@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class KeepCanvasUp : MonoBehaviour
 {
-    Vector3 pos = new Vector3(-0.015f, 0.712f, 0);
     void Update()
     {
         transform.rotation = Quaternion.Euler(0,0,0);
