@@ -24,6 +24,10 @@ public class Timer : MonoBehaviour
             minutes++;
             seconds = 0;
         }
+        if(minutes > 99)
+        {
+            minutes = 99;
+        }
         timer.text = minutes + ":" + seconds + ":" + (int)(elapsedTime*100);
     }
 }

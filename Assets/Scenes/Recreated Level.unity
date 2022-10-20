@@ -297,7 +297,7 @@ RectTransform:
   - {fileID: 362816274}
   - {fileID: 1434471850}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -431,7 +431,7 @@ Transform:
   - {fileID: 1691981100}
   - {fileID: 743657481}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &263536591 stripped
 AudioSource:
@@ -2173,8 +2173,9 @@ MonoBehaviour:
   audioSource: {fileID: 1576061890}
   deathSound: {fileID: 8300000, guid: 1b7323dc2e445e24db342c39c6962ca0, type: 3}
   lives: {fileID: 1943172670}
-  map: {fileID: 241833245}
+  countdown: {fileID: 1943172669}
   timer: {fileID: 1943172668}
+  cherryController: {fileID: 425134460}
 --- !u!50 &1576061897
 Rigidbody2D:
   serializedVersion: 4
@@ -9267,7 +9268,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1943172668
 MonoBehaviour:
@@ -9493,11 +9494,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 9b4a35e66443ab842bfc563a97b2d51d, type: 3}
     - target: {fileID: 4009403194080247636, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4009403194080247637, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4009403194080247637, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: m_LocalPosition.x

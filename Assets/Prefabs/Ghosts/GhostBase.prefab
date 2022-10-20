@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 1782077256094306915}
   - component: {fileID: 7295006626324316448}
   - component: {fileID: 7767228903807073366}
+  - component: {fileID: 1002476534082872253}
   m_Layer: 0
   m_Name: GhostBase
   m_TagString: Ghost
@@ -323,6 +324,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8876161062402385982}
   scared: 0
+--- !u!114 &1002476534082872253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548896004394318679}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495e8d6c64b0777479581b02551e864f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {x: 0, y: 0}
 --- !u!1 &2548896005206372100
 GameObject:
   m_ObjectHideFlags: 0

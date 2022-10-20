@@ -9,8 +9,7 @@ public class Lives : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //DontDestroyOnLoad(gameObject);
-        UpdateLives();
+        PlayerPrefs.SetInt("Lives", 3);
     }
 
     public void UpdateLives()

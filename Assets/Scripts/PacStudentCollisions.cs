@@ -15,9 +15,10 @@ public class PacStudentCollisions : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip deathSound;
     public Lives lives;
-    public GameObject map;
+    public Countdown countdown;
     public Timer timer;
-    GameObject newMap;
+    public CherryController cherryController;
+    int hits;
     private void OnTriggerEnter2D(Collider2D collider)
     {
         switch(collider.gameObject.tag)
@@ -36,6 +37,11 @@ public class PacStudentCollisions : MonoBehaviour
                 if(collider.gameObject.name == "Pellet(Clone)")
                 {
                     collectableCollision(collider, 10);
+                    hits++;
+                    if(hits == 218) //every pellet eaten
+                    {
+                        StartCoroutine(GameComplete());
+                    }
                 }
                 else if(collider.gameObject.name == "Cherry(Clone)")
                 {
@@ -78,57 +84,49 @@ public class PacStudentCollisions : MonoBehaviour
         Destroy(collider2D.gameObject);
         stats.UpdateScore(amount);
     }
-    void Start()
-    {
-        if(GameObject.FindGameObjectWithTag("newMap") != null)
-        {
-            Destroy(GameObject.FindGameObjectWithTag("Map"));
-            map = GameObject.FindGameObjectWithTag("newMap");
-            map.tag = "Map";
-            pacStudentController.tilemap = map.transform.GetChild(0).GetComponent<Tilemap>();
-        }
-    }
 
     IEnumerator deadPlayer()
     {
-        DontDestroyOnLoad(map);
-        map.tag = "newMap";
-
         audioSource.Stop();
         backgroundMusic.Stop();
+        backgroundMusic.enabled = false;
         timer.enabled = false;
 
         pacStudentController.enabled = false; //stop movement
 
         Time.timeScale = 0.0f;
         yield return new WaitForSecondsRealtime(2); //let the game hang for two seconds, letting the player absorb the impact before losing a life
-
         Time.timeScale = 1.0f;
-        foreach(Transform child in ghosts)
+
+        turnOffGhosts();
+
+        cherryController.StopAllCoroutines();
+
+        foreach(GameObject collectable in GameObject.FindGameObjectsWithTag("Collectable"))
         {
-            child.gameObject.SetActive(false);
+            if(collectable.name == "Cherry(Clone)")
+            {
+                Destroy(collectable);
+            }
         }
 
         audioSource.clip = deathSound;
         audioSource.loop = false;
-        animator.Play("Exit Machine"); //stop layer 1
-        
+        animator.Play("Exit Machine", 1); //stop layer 1
         audioSource.Play();
+
         animator.Play("PacDeath", 0);
 
         lives.RemoveLife();
         yield return new WaitForSeconds(animator.runtimeAnimatorController.animationClips[5].length);
-        SceneManager.LoadScene(1);
+        resetLevel();
     }
 
-    /*
     void resetLevel()
     {
         transform.position = new Vector3(-12.5f, 13.5f);
 
-        animator.enabled = false;
-        transform.GetComponent<SpriteRenderer>().sprite = defaultSprite;
-        audioSource.enabled = false;
+        animator.Play("Rolling", 0);
 
         pacStudentController.enabled = true;
         pacStudentController.Start();
@@ -136,14 +134,14 @@ public class PacStudentCollisions : MonoBehaviour
         foreach(Transform child in ghosts)
         {
             child.gameObject.SetActive(true);
+            child.GetComponent<ResetPosition>().Start();
         }
 
-        backgroundPlayer.enabled = true;
         backgroundMusic.enabled = true;
-        backgroundMusic.Start();
+        backgroundMusic.transform.GetComponent<AudioPlayer>().Start();
+        audioSource.clip = pacStudentController.audioClips[0];
         countdown.Start();
     }
-    */
 
     IEnumerator deadGhost(Collider2D collider)
     {
@@ -161,5 +159,27 @@ public class PacStudentCollisions : MonoBehaviour
 
         StopCoroutine(scareManager.scaredState());
         StartCoroutine(scareManager.RecoveringGhost());
+    }
+    IEnumerator GameComplete()
+    {
+        Debug.Log("Game complete!");
+
+        Time.timeScale = 0.0f;
+        yield return new WaitForSecondsRealtime(2); //let the game hang for two seconds, letting the player absorb the impact before losing a life
+        Time.timeScale = 1.0f;
+
+        turnOffGhosts();
+
+        //TODO: add a fun animation of the player winning the game, then save prefs+load the menu (DO THIS IN A DIFFERENT OBJECT THIS TIME)
+
+        yield return null;
+    }
+
+    void turnOffGhosts()
+    {
+        foreach(Transform child in ghosts)
+        {
+            child.gameObject.SetActive(false);
+        }
     }
 }

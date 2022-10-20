@@ -21,20 +21,15 @@ public class PacStudentController : MonoBehaviour
     {
         currentInput = transform.position;
         lastInput = Vector3Int.zero;
+        audioSource.clip = null;
+        audioSource.Stop();
     }
 
     void Update()
     {
-        if(Input.anyKeyDown && !smokes.activeSelf && !animator.isActiveAndEnabled && !audioSource.isActiveAndEnabled)
+        if(Input.anyKeyDown && !audioSource.isPlaying)
         {
-            smokes.SetActive(true);
             animator.enabled = true;
-            animator.speed = 1;
-            animator.Play("Rolling", 0);
-
-            audioSource.enabled = true;
-            audioSource.loop = true;
-            audioSource.clip = audioClips[0];
             audioSource.Play();
         }
         //Get inputs and update lastInput
