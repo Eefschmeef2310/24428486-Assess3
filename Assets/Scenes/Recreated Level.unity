@@ -433,6 +433,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &252925833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 252925835}
+  - component: {fileID: 252925834}
+  m_Layer: 0
+  m_Name: Save Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &252925834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252925833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead5604834bfa3c40b29ca555b6dd65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &252925835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252925833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &263536591 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5558948359714291862, guid: 5809ba49e2310d843baf4511d4cbf5c1, type: 3}
@@ -2176,6 +2220,7 @@ MonoBehaviour:
   countdown: {fileID: 1943172669}
   timer: {fileID: 1943172668}
   cherryController: {fileID: 425134460}
+  gameWon: {fileID: 0}
 --- !u!50 &1576061897
 Rigidbody2D:
   serializedVersion: 4
@@ -9234,6 +9279,7 @@ GameObject:
   - component: {fileID: 1943172666}
   - component: {fileID: 1943172668}
   - component: {fileID: 1943172670}
+  - component: {fileID: 1943172671}
   m_Layer: 0
   m_Name: HUD Manager
   m_TagString: Untagged
@@ -9312,6 +9358,22 @@ MonoBehaviour:
   - {fileID: 1679156805}
   - {fileID: 1141421270}
   - {fileID: 153338764}
+--- !u!114 &1943172671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943172665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001217add0b443d4fa3b594792e13d16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endCanvas: {fileID: 0}
+  wonText: {fileID: 0}
+  audioSource: {fileID: 0}
+  audioPlayer: {fileID: 0}
 --- !u!1 &2056739043
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ public class PacStudentCollisions : MonoBehaviour
     public Countdown countdown;
     public Timer timer;
     public CherryController cherryController;
+    public GameWon gameWon;
     int hits;
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -40,7 +41,7 @@ public class PacStudentCollisions : MonoBehaviour
                     hits++;
                     if(hits == 218) //every pellet eaten
                     {
-                        StartCoroutine(GameComplete());
+                        StartCoroutine(gameComplete());
                     }
                 }
                 else if(collider.gameObject.name == "Cherry(Clone)")
@@ -119,7 +120,14 @@ public class PacStudentCollisions : MonoBehaviour
 
         lives.RemoveLife();
         yield return new WaitForSeconds(animator.runtimeAnimatorController.animationClips[5].length);
-        resetLevel();
+        if(PlayerPrefs.GetInt("Lives") == 0)
+        {
+            Debug.Log("Game Over!");
+        }
+        else
+        {
+            resetLevel();
+        }
     }
 
     void resetLevel()
@@ -160,7 +168,7 @@ public class PacStudentCollisions : MonoBehaviour
         StopCoroutine(scareManager.scaredState());
         StartCoroutine(scareManager.RecoveringGhost());
     }
-    IEnumerator GameComplete()
+    IEnumerator gameComplete()
     {
         Debug.Log("Game complete!");
 
@@ -169,6 +177,7 @@ public class PacStudentCollisions : MonoBehaviour
         Time.timeScale = 1.0f;
 
         turnOffGhosts();
+        gameWon.gameComplete();
 
         //TODO: add a fun animation of the player winning the game, then save prefs+load the menu (DO THIS IN A DIFFERENT OBJECT THIS TIME)
 

@@ -38,10 +38,7 @@ public class Lives : MonoBehaviour
     {
         PlayerPrefs.SetInt("Lives", PlayerPrefs.GetInt("Lives") - 1);
         UpdateLives();
-        if(PlayerPrefs.GetInt("Lives") == 0)
-        {
-            Debug.Log("Game Over!");
-        }
+        
         
     }
 }

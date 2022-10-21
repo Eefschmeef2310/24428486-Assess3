@@ -6,9 +6,9 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timer;
-    float elapsedTime;
-    int minutes;
-    int seconds;
+    public float elapsedTime;
+    public int minutes;
+    public int seconds;
 
     // Update is called once per frame
     void Update()
