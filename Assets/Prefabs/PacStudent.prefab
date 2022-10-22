@@ -4828,6 +4828,8 @@ GameObject:
   - component: {fileID: 7409653574690296371}
   - component: {fileID: 4009403193339244093}
   - component: {fileID: 4922581549439895404}
+  - component: {fileID: 1576061897}
+  - component: {fileID: 1576061896}
   m_Layer: 0
   m_Name: PacStudent
   m_TagString: Untagged
@@ -4931,7 +4933,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4009403194080247639}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 70d3bc79840864a4c8f6394c3fefe9b6, type: 3}
@@ -5036,9 +5038,11 @@ MonoBehaviour:
   animator: {fileID: 4009403194080247636}
   smokes: {fileID: 8095447815271962339}
   audioSource: {fileID: 7409653574690296371}
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: 70d3bc79840864a4c8f6394c3fefe9b6, type: 3}
+  - {fileID: 8300000, guid: 9b4a35e66443ab842bfc563a97b2d51d, type: 3}
   currentInput: {x: 0, y: 0, z: 0}
-  speed: 1
+  speed: 5
 --- !u!61 &4922581549439895404
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5065,6 +5069,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6925409, y: 0.76962036}
   m_EdgeRadius: 0
+--- !u!50 &1576061897
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4009403194080247639}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!114 &1576061896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4009403194080247639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0806f7ca33232e044b5896cdedb138e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pacStudentController: {fileID: 4009403193339244093}
+  ghosts: {fileID: 0}
+  stats: {fileID: 0}
+  animator: {fileID: 4009403194080247636}
+  backgroundMusic: {fileID: 0}
+  audioSource: {fileID: 7409653574690296371}
+  deathSound: {fileID: 8300000, guid: 1b7323dc2e445e24db342c39c6962ca0, type: 3}
+  lives: {fileID: 0}
+  countdown: {fileID: 0}
+  timer: {fileID: 0}
+  cherryController: {fileID: 0}
+  gameWon: {fileID: 0}
 --- !u!1 &4076627908718796208
 GameObject:
   m_ObjectHideFlags: 0
@@ -19555,7 +19604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6958079838106581913
 Transform:
   m_ObjectHideFlags: 0

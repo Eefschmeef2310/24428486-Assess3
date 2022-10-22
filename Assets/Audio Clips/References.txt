@@ -10,3 +10,7 @@ PacDeath: https://pixabay.com/sound-effects/hit-someting-6037/
 Wall Collision: https://pixabay.com/sound-effects/punch-boxing-02wav-14897/ 
 Menu Music: https://www.youtube.com/watch?v=I9T8ZG4ZbNU&ab_channel=monviando
 Menu Music 2: https://www.youtube.com/watch?v=AycvMpimWkI&ab_channel=KMusic-MarcJaworski
+Winning: https://www.mediafire.com/file/5vdlynessrcx4kb/
+Losing: https://www.youtube.com/watch?v=WChTqYlDjtI&ab_channel=UnitedStatesNavyBand
+Cherry: https://pixabay.com/sound-effects/5-107199/
+Ghost Death: https://pixabay.com/sound-effects/smoke-bomb-6761/

@@ -54,7 +54,7 @@ public class PacStudentController : MonoBehaviour
         if(transform.position == currentInput && isMoving)
         {
             Vector3Int nextPos = new Vector3Int((int)(currentInput.x - 0.5f) + lastInput.x, (int)(currentInput.y - 0.5f) + lastInput.y);
-            if(tilemap.GetTile(nextPos) == null || tilemap.GetTile(nextPos).name == "Pellet" || tilemap.GetTile(nextPos).name == "PowerPellet") //tile in direction is valid
+            if(tilemap.GetTile(nextPos) == null || tilemap.GetTile(nextPos).name == "Pellet" || tilemap.GetTile(nextPos).name == "PowerPellet" || tilemap.GetTile(nextPos).name == "PacValid") //tile in direction is valid
             {
                 currentInput += lastInput;
                 movingDirection = lastInput;

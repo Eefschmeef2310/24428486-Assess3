@@ -29,7 +29,6 @@ public class Lives : MonoBehaviour
                 images[0].enabled = false;
                 break;
             default:
-                PlayerPrefs.SetInt("Lives", 3);
                 break;
         }
     }
@@ -38,7 +37,5 @@ public class Lives : MonoBehaviour
     {
         PlayerPrefs.SetInt("Lives", PlayerPrefs.GetInt("Lives") - 1);
         UpdateLives();
-        
-        
     }
 }

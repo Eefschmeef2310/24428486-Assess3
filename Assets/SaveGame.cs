@@ -9,9 +9,12 @@ public class SaveGame : MonoBehaviour
 
     public void saveGame()
     {
-        PlayerPrefs.SetInt("Score", score.score);
-        PlayerPrefs.SetInt("Minutes", timer.minutes);
-        PlayerPrefs.SetInt("Seconds", timer.seconds);
-        PlayerPrefs.SetInt("Milliseconds", (int)(timer.elapsedTime*100));
+        if(score.score >= PlayerPrefs.GetInt("Score")) //score always takes priority (Sidenote, score can be infinite, cause of the cherry, so checking the timer doesn't matter)
+        {
+            PlayerPrefs.SetInt("Score", score.score);
+            PlayerPrefs.SetInt("Minutes", timer.minutes);
+            PlayerPrefs.SetInt("Seconds", timer.seconds);
+            PlayerPrefs.SetInt("Milliseconds", (int)(timer.elapsedTime*100));
+        }
     }
 }

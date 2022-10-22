@@ -18,7 +18,7 @@ public class PacStudentCollisions : MonoBehaviour
     public Countdown countdown;
     public Timer timer;
     public CherryController cherryController;
-    public GameWon gameWon;
+    public GameEnd gameWon;
     int hits;
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -35,7 +35,8 @@ public class PacStudentCollisions : MonoBehaviour
                 }
                 break;
             case "Collectable":
-                if(collider.gameObject.name == "Pellet(Clone)")
+                AudioSource.PlayClipAtPoint(collider.gameObject.GetComponent<AudioSource>().clip, Vector3.zero);
+                if(collider.name == "Pellet(Clone)")
                 {
                     collectableCollision(collider, 10);
                     hits++;
@@ -44,11 +45,11 @@ public class PacStudentCollisions : MonoBehaviour
                         StartCoroutine(gameComplete());
                     }
                 }
-                else if(collider.gameObject.name == "Cherry(Clone)")
+                else if(collider.name == "Cherry(Clone)")
                 {
                     collectableCollision(collider, 100);
                 }
-                else if(collider.gameObject.name == "PowerPellet(Clone)")
+                else if(collider.name == "PowerPellet(Clone)")
                 {
                     Destroy(collider.gameObject);
                     ghosts.GetComponent<GhostManager>().powerPellet();
@@ -102,6 +103,7 @@ public class PacStudentCollisions : MonoBehaviour
         turnOffGhosts();
 
         cherryController.StopAllCoroutines();
+        cherryController.enabled = false;
 
         foreach(GameObject collectable in GameObject.FindGameObjectsWithTag("Collectable"))
         {
@@ -120,9 +122,10 @@ public class PacStudentCollisions : MonoBehaviour
 
         lives.RemoveLife();
         yield return new WaitForSeconds(animator.runtimeAnimatorController.animationClips[5].length);
-        if(PlayerPrefs.GetInt("Lives") == 0)
+        if(PlayerPrefs.GetInt("Lives") <= 0)
         {
-            Debug.Log("Game Over!");
+            animator.enabled = false;
+            StartCoroutine(gameWon.gameComplete(false));
         }
         else
         {
@@ -135,6 +138,7 @@ public class PacStudentCollisions : MonoBehaviour
         transform.position = new Vector3(-12.5f, 13.5f);
 
         animator.Play("Rolling", 0);
+        cherryController.enabled = true;
 
         pacStudentController.enabled = true;
         pacStudentController.Start();
@@ -153,6 +157,7 @@ public class PacStudentCollisions : MonoBehaviour
 
     IEnumerator deadGhost(Collider2D collider)
     {
+        AudioSource.PlayClipAtPoint(collider.gameObject.GetComponent<AudioSource>().clip, Vector3.zero);
         audioSource.enabled = false;
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(0.5f);
@@ -170,16 +175,12 @@ public class PacStudentCollisions : MonoBehaviour
     }
     IEnumerator gameComplete()
     {
-        Debug.Log("Game complete!");
-
         Time.timeScale = 0.0f;
         yield return new WaitForSecondsRealtime(2); //let the game hang for two seconds, letting the player absorb the impact before losing a life
         Time.timeScale = 1.0f;
 
         turnOffGhosts();
-        gameWon.gameComplete();
-
-        //TODO: add a fun animation of the player winning the game, then save prefs+load the menu (DO THIS IN A DIFFERENT OBJECT THIS TIME)
+        StartCoroutine(gameWon.gameComplete(true));
 
         yield return null;
     }
