@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 7767228903807073366}
   - component: {fileID: 1002476534082872253}
   - component: {fileID: 3287310775535625357}
+  - component: {fileID: 3479165910378644746}
   m_Layer: 0
   m_Name: GhostBase
   m_TagString: Ghost
@@ -324,7 +325,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8876161062402385982}
+  collider: {fileID: 7295006626324316448}
+  resetPosition: {fileID: 1002476534082872253}
   scared: 0
+  dead: 0
+  speed: 3
 --- !u!114 &1002476534082872253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,6 +439,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3479165910378644746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548896004394318679}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a73d448c77d40b40b99522dbfd6b726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  tilemap: {fileID: 0}
+  animator: {fileID: 8876161062402385982}
+  ghostType: 0
+  scareManager: {fileID: 7767228903807073366}
+  pacStudent: {fileID: 0}
+  positions: []
 --- !u!1 &2548896005206372100
 GameObject:
   m_ObjectHideFlags: 0

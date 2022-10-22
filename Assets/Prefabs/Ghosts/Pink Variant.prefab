@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pink Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3479165910378644746, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
+      propertyPath: ghostType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6427702685502688369, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
       propertyPath: m_Name
       value: Ghost1Canvas

@@ -23,6 +23,7 @@ public class PacStudentController : MonoBehaviour
         lastInput = Vector3Int.zero;
         audioSource.clip = null;
         audioSource.Stop();
+        animator.enabled = false;
     }
 
     void Update()
@@ -30,6 +31,7 @@ public class PacStudentController : MonoBehaviour
         if(Input.anyKeyDown && !audioSource.isPlaying)
         {
             animator.enabled = true;
+            audioSource.enabled = true;
             audioSource.Play();
         }
         //Get inputs and update lastInput

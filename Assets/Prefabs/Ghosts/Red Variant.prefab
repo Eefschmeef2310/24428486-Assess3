@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3479165910378644746, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
+      propertyPath: ghostType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5649562349002587048, guid: 1da646a679166f349a0e427a96a3d674, type: 3}
       propertyPath: m_Text
       value: 2

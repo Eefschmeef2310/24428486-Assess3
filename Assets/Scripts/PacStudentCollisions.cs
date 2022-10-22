@@ -19,6 +19,7 @@ public class PacStudentCollisions : MonoBehaviour
     public Timer timer;
     public CherryController cherryController;
     public GameEnd gameWon;
+    public GhostStarter ghostStarter;
     int hits;
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -148,6 +149,8 @@ public class PacStudentCollisions : MonoBehaviour
             child.gameObject.SetActive(true);
             child.GetComponent<ResetPosition>().Start();
         }
+        ghostStarter.enabled = true;
+        ghostStarter.Start();
 
         backgroundMusic.enabled = true;
         backgroundMusic.transform.GetComponent<AudioPlayer>().Start();
