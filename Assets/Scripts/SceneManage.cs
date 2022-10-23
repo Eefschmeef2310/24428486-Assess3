@@ -13,6 +13,6 @@ public class SceneManage : MonoBehaviour
 
     public void Level2()
     {
-        Debug.Log("On to Level 2!");
+        SceneManager.LoadScene(2);
     }
 }
