@@ -7,8 +7,10 @@ public class GhostManager : MonoBehaviour
 {
     public TextMeshProUGUI ghostTimer;
     public AudioSource backgroundMusic;
+    public bool pelletMode = false;
     public void powerPellet()
     {
+        pelletMode = true;
         StartCoroutine(scaredGhosts());
     }
 
@@ -47,6 +49,11 @@ public class GhostManager : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
 
+        exitPelletMode();
+    }
+
+    public void exitPelletMode()
+    {
         foreach(Transform child in transform)
         {
             if(child.GetComponent<ScareManager>().scared)
@@ -55,7 +62,8 @@ public class GhostManager : MonoBehaviour
             }
         }
         ghostTimer.gameObject.SetActive(false);
-
+        pelletMode = false;
+        
         backgroundMusic.loop = true;
         backgroundMusic.clip = backgroundMusic.GetComponent<AudioPlayer>().clips[1];
         backgroundMusic.Play();
