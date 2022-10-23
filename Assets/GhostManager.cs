@@ -5,17 +5,10 @@ using TMPro;
 
 public class GhostManager : MonoBehaviour
 {
-    public bool scared = false;
     public TextMeshProUGUI ghostTimer;
     public AudioSource backgroundMusic;
     public void powerPellet()
     {
-        scared = true;
-        foreach(Transform child in transform)
-        {
-            StartCoroutine(child.GetComponent<ScareManager>().scaredState());
-        }
-        StopAllCoroutines();
         StartCoroutine(scaredGhosts());
     }
 
@@ -24,6 +17,15 @@ public class GhostManager : MonoBehaviour
         ghostTimer.gameObject.SetActive(true);
         backgroundMusic.clip = backgroundMusic.GetComponent<AudioPlayer>().clips[2];
         backgroundMusic.Play();
+
+        foreach(Transform child in transform)
+        {
+            if(child.GetComponent<GhostController>().enabled)
+            {
+                child.GetComponent<ScareManager>().scaredState();
+            }
+            
+        }
 
         for(int i = 10; i > 3; i--)
         {
@@ -45,7 +47,6 @@ public class GhostManager : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
 
-        scared = false;
         foreach(Transform child in transform)
         {
             if(child.GetComponent<ScareManager>().scared)

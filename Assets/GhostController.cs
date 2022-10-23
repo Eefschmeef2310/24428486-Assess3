@@ -5,7 +5,6 @@ using UnityEngine.Tilemaps;
 
 public class GhostController : MonoBehaviour
 {
-    Vector3Int input;
     Vector3Int movingDirection;
     Vector3 nextPos;
     Vector3 previousPos;
@@ -16,7 +15,6 @@ public class GhostController : MonoBehaviour
     public ScareManager scareManager;
     public Transform pacStudent;
     bool topCornerReached = false;
-
     public List<Vector3> positions;
     int fourPos;
     Vector3Int[] directions = {
@@ -27,6 +25,10 @@ public class GhostController : MonoBehaviour
     };
 
     void Start()
+    {
+        Reset();
+    }
+    public void Reset()
     {
         previousPos = transform.position;
         nextPos = transform.position;
@@ -62,19 +64,19 @@ public class GhostController : MonoBehaviour
         {
             if(movingDirection == Vector3Int.up)
             {
-                animator.Play("Up", 1);
+                animator.Play("Up", 0);
             }
             else if(movingDirection == Vector3Int.left)
             {
-                animator.Play("Left", 1);
+                animator.Play("Left", 0);
             }
             else if(movingDirection == Vector3Int.down)
             {
-                animator.Play("Down", 1);
+                animator.Play("Down", 0);
             }
             else if(movingDirection == Vector3Int.right)
             {
-                animator.Play("Right", 1);
+                animator.Play("Right", 0);
             }
             transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
         }

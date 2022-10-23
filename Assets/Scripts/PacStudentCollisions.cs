@@ -20,6 +20,7 @@ public class PacStudentCollisions : MonoBehaviour
     public CherryController cherryController;
     public GameEnd gameWon;
     public GhostStarter ghostStarter;
+    public Sprite defaultSprite;
     int hits;
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -57,7 +58,7 @@ public class PacStudentCollisions : MonoBehaviour
                 }
                 break;
             case "Ghost":
-                if(ghosts.GetComponent<GhostManager>().scared)
+                if(collider.GetComponent<ScareManager>().scared)
                 {
                     stats.UpdateScore(300);
                     StartCoroutine(deadGhost(collider));
@@ -139,6 +140,7 @@ public class PacStudentCollisions : MonoBehaviour
         transform.position = new Vector3(-12.5f, 13.5f);
 
         animator.Play("Rolling", 0);
+        gameObject.GetComponent<SpriteRenderer>().sprite = defaultSprite;
         cherryController.enabled = true;
 
         pacStudentController.enabled = true;
@@ -148,6 +150,7 @@ public class PacStudentCollisions : MonoBehaviour
         {
             child.gameObject.SetActive(true);
             child.GetComponent<ResetPosition>().Start();
+            child.GetComponent<GhostController>().enabled = false;
         }
         ghostStarter.enabled = true;
         ghostStarter.Start();
@@ -171,10 +174,7 @@ public class PacStudentCollisions : MonoBehaviour
         backgroundMusic.clip = backgroundMusic.GetComponent<AudioPlayer>().clips[3];
         backgroundMusic.Play();
 
-        ScareManager scareManager = collider.GetComponent<ScareManager>();
-
-        StopCoroutine(scareManager.scaredState());
-        StartCoroutine(scareManager.RecoveringGhost());
+        collider.GetComponent<ScareManager>().RecoveringGhost();
     }
     IEnumerator gameComplete()
     {

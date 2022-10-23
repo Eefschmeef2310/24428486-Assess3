@@ -32,6 +32,7 @@ public class PacStudentController : MonoBehaviour
         {
             animator.enabled = true;
             audioSource.enabled = true;
+            audioSource.loop = true;
             audioSource.Play();
         }
         //Get inputs and update lastInput

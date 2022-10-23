@@ -6,7 +6,12 @@ public class GhostStarter : MonoBehaviour
 {
     //This script is for moving the ghosts from the pen to the starting position. From there, their AI takes over
     public List<GameObject> ghosts;
+    public List<Animator> animators;
+    public List<ScareManager> scareManagers;
+    public List<SpriteRenderer> spriteRenderers;
+    public List<Color> colors;
     public List<float> zPos;
+    public List<GhostController> controllers;
     int ghost = 0;
     int section = 1;
     public float moveSpeed = 3;
@@ -21,26 +26,37 @@ public class GhostStarter : MonoBehaviour
     {
         if(ghost == 4)
         {
-            gameObject.GetComponent<GhostStarter>().enabled = false;
+            this.enabled = false;
         }
         else
         {
-            moveGhost(ghosts[ghost]);
+            animators[ghost].enabled = false;
+            if(scareManagers[ghost].scared)    
+            {
+                spriteRenderers[ghost].color = new Color(0,0,0.82353f);
+            }        
+            else
+            {
+                spriteRenderers[ghost].color = colors[ghost];
+            }
+            moveGhost(ghosts[ghost], ghost);
         }
     }
 
-    void moveGhost(GameObject movingGhost)
+    public void moveGhost(GameObject movingGhost, int ghost)
     {
         if(section == 4)
         {
-            movingGhost.GetComponent<GhostController>().enabled = true;
-            ghost++;
+            this.ghost++;
             section = 1;
+            controllers[ghost].enabled = true;
+            controllers[ghost].Reset();
+            animators[ghost].enabled = true;
         }
         else{
             if(section == 1)
             {
-                if(Vector3.Distance(movingGhost.transform.position, new Vector3(0,1.5f,0)) <= 0.1f)
+                if(movingGhost.transform.position == new Vector3(0,1.5f,0))
                 {
                     section++;
                     movingGhost.transform.position = new Vector3(0,1.5f,0);
@@ -53,7 +69,7 @@ public class GhostStarter : MonoBehaviour
             }
             else if(section == 2)
             {
-                if(Vector3.Distance(movingGhost.transform.position, new Vector3(0,3.5f,0)) <= 0.1f)
+                if(movingGhost.transform.position == new Vector3(0,3.5f,0))
                 {
                     section++;
                     movingGhost.transform.position = new Vector3(0,3.5f,0);
@@ -66,10 +82,9 @@ public class GhostStarter : MonoBehaviour
             }
             else if(section == 3)
             {
-                if(Vector3.Distance(movingGhost.transform.position, new Vector3(-0.5f,3.5f,0)) <= 0.1f)
+                if(movingGhost.transform.position == new Vector3(-0.5f,3.5f,0))
                 {
                     section++;
-                    movingGhost.transform.position = new Vector3(-0.5f, 3.5f,0);
                 }
                 else
                 {
