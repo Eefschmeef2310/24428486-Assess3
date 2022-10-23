@@ -155,7 +155,6 @@ GameObject:
   - component: {fileID: 7687978513867718244}
   - component: {fileID: 7382918060416491967}
   - component: {fileID: 8876161062402385982}
-  - component: {fileID: 1782077256094306915}
   - component: {fileID: 7295006626324316448}
   - component: {fileID: 7767228903807073366}
   - component: {fileID: 1002476534082872253}
@@ -273,19 +272,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1782077256094306915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2548896004394318679}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b4fa406680549e4a89d850e51f99045, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
 --- !u!61 &7295006626324316448
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -325,11 +311,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8876161062402385982}
-  collider: {fileID: 7295006626324316448}
   resetPosition: {fileID: 1002476534082872253}
   scared: 0
   dead: 0
+  ghost: 0
   speed: 3
+  collide: {fileID: 0}
+  ghostController: {fileID: 0}
+  ghostStarter: {fileID: 0}
 --- !u!114 &1002476534082872253
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -183,6 +183,7 @@ public class PacStudentCollisions : MonoBehaviour
         Time.timeScale = 1.0f;
 
         turnOffGhosts();
+        pacStudentController.enabled = false;
         StartCoroutine(gameWon.gameComplete(true));
 
         yield return null;
