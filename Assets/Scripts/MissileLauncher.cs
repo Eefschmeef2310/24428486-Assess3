@@ -5,11 +5,14 @@ using UnityEngine;
 public class MissileLauncher : MonoBehaviour
 {
     public GhostManager ghostManager;
+    public GameObject missile;
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) && ghostManager.pelletMode)
         {
-            Debug.Log("Missile launched!");
+            missile.SetActive(true);
+            Instantiate(missile, transform.position, Quaternion.identity);
+            missile.SetActive(false);
             ghostManager.exitPelletMode();
         }
     }

@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public class PacStudentController : MonoBehaviour
 {
     Vector3Int lastInput; //Vector3.*direction* will be used.
-    Vector3Int movingDirection;
+    [HideInInspector] public Vector3Int movingDirection;
     public Tilemap tilemap;
     public Animator animator;
     public GameObject smokes;
