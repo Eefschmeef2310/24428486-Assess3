@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 816229329034937298}
   - component: {fileID: 601057463764096448}
   - component: {fileID: 8535626881868048456}
+  - component: {fileID: 3453610805238225567}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &816229329034937298
 Transform:
   m_ObjectHideFlags: 0
@@ -97,3 +98,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29fbf195900b9b4a87567d0876de0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pacStudentController: {fileID: 0}
+  tilemap: {fileID: 0}
+  speed: 0
+--- !u!114 &3453610805238225567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7955108690902642209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 424ca678a1c549c4d81b51299708d074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 0}
+  backgroundMusic: {fileID: 0}
+  audioSource: {fileID: 0}

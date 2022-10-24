@@ -17,8 +17,6 @@ public class MoveMissile : MonoBehaviour
     }
     void Update()
     {
-        //Debug.Log(movingDirection);
-        Debug.Log(nextPos);
         if(transform.position == nextPos)
         {
             if(CheckPos(movingDirection + nextPos))
