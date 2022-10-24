@@ -11,6 +11,7 @@ public class GhostManager : MonoBehaviour
     public void powerPellet()
     {
         pelletMode = true;
+        StopAllCoroutines();
         StartCoroutine(scaredGhosts());
     }
 

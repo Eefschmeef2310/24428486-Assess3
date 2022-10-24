@@ -14,6 +14,8 @@ public class ScareManager : MonoBehaviour
     public BoxCollider2D collide;
     public GhostController ghostController;
     public GhostStarter ghostStarter;
+    public SpriteRenderer spriteRenderer;
+    public Sprite sprite;
     void Update()
     {
         if(dead && resetting)
@@ -22,17 +24,15 @@ public class ScareManager : MonoBehaviour
             collide.enabled = false;
             ghostStarter.enabled = false;
 
-            animator.Play("TurnOffTrails", 1);
-            animator.Play("Recovering", 1);
-            animator.Play("Right", 0);
-            
+            animator.SetLayerWeight(0,0);
+
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(resetPosition.xPos, -0.5f, 0), speed * Time.deltaTime);
-            
             
             if(transform.position == new Vector3(resetPosition.xPos, -0.5f, 0))
             {
+                animator.SetLayerWeight(0,1);
+                animator.SetLayerWeight(1,0);
                 animator.Play("Down", 0);
-                animator.Play("Default", 1);
                 dead = false;
             }            
         }
@@ -41,6 +41,8 @@ public class ScareManager : MonoBehaviour
             if(transform.position == new Vector3(-0.5f, 3.5f, 0))
             {
                 animator.enabled = true;
+                animator.SetLayerWeight(0,1);
+                animator.SetLayerWeight(1,0);
                 
                 ghostController.enabled = true;
                 ghostController.Reset();
@@ -53,7 +55,7 @@ public class ScareManager : MonoBehaviour
             }
             else
             {
-                animator.Play("Default", 1);
+                spriteRenderer.sprite = sprite;
                 animator.enabled = false;
                 ghostStarter.moveGhost(gameObject, ghost);
             }
@@ -64,11 +66,15 @@ public class ScareManager : MonoBehaviour
         dead = true;
         resetting = true;
         animator.enabled = true;
+        scared = false;
+        animator.Play("Right", 0);
+        animator.Play("TurnOffTrails", 1);
         animator.Play("Recovering", 1);
     }
 
     public void scaredState()
     {
+        animator.SetLayerWeight(1,1);
         scared = true;
         animator.Play("Scared", 1);
     }

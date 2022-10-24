@@ -31,6 +31,7 @@ public class GhostStarter : MonoBehaviour
         else
         {
             animators[ghost].enabled = false;
+            
             if(scareManagers[ghost].scared)    
             {
                 spriteRenderers[ghost].color = new Color(0,0,0.82353f);

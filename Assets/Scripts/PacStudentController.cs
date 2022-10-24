@@ -72,6 +72,7 @@ public class PacStudentController : MonoBehaviour
                 else // player must stop
                 {
                     isMoving = false;
+                    animator.Play("Thud", 0);
                     animator.speed = 0;
                     smokes.SetActive(false);
 
@@ -84,6 +85,7 @@ public class PacStudentController : MonoBehaviour
         else if (isMoving)
         {
             animator.speed = 1;
+            animator.Play("Rolling", 0);
             smokes.SetActive(true);
 
             if(movingDirection == Vector3Int.up)

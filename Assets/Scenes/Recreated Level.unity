@@ -9393,6 +9393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostTimer: {fileID: 1484187878}
   backgroundMusic: {fileID: 263536591}
+  pelletMode: 0
 --- !u!4 &2056739045
 Transform:
   m_ObjectHideFlags: 0
@@ -9610,10 +9611,22 @@ PrefabInstance:
       propertyPath: pacStudent
       value: 
       objectReference: {fileID: 1279766146}
+    - target: {fileID: 1972005766486635059, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972005766486635062, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 448617056, guid: a5e58db72d7a6374b9624b1b8217d15c, type: 3}
     - target: {fileID: 1972005766486635062, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
       propertyPath: ghostStarter
       value: 
       objectReference: {fileID: 2056739046}
+    - target: {fileID: 1972005766486635062, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 276385941}
     - target: {fileID: 1972005766486635066, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9721,10 +9734,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orange Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2522411069918423912, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522411069918423919, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 448617056, guid: a5e58db72d7a6374b9624b1b8217d15c, type: 3}
     - target: {fileID: 2522411069918423919, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
       propertyPath: ghostStarter
       value: 
       objectReference: {fileID: 2056739046}
+    - target: {fileID: 2522411069918423919, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1612203284}
     - target: {fileID: 2522411069918423925, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
       propertyPath: tilemap
       value: 
@@ -9880,10 +9905,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4892017132074497042, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892017132074497047, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 448617056, guid: a5e58db72d7a6374b9624b1b8217d15c, type: 3}
     - target: {fileID: 4892017132074497047, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
       propertyPath: ghostStarter
       value: 
       objectReference: {fileID: 2056739046}
+    - target: {fileID: 4892017132074497047, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1423353181}
     - target: {fileID: 4892017132074497053, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
       propertyPath: tilemap
       value: 
@@ -9995,6 +10032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4920239831816874121, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4920239831816874122, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
       propertyPath: tilemap
       value: 
@@ -10004,9 +10045,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1279766146}
     - target: {fileID: 4920239831816874124, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 448617056, guid: a5e58db72d7a6374b9624b1b8217d15c, type: 3}
+    - target: {fileID: 4920239831816874124, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
       propertyPath: ghostStarter
       value: 
       objectReference: {fileID: 2056739046}
+    - target: {fileID: 4920239831816874124, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 2090494403}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
