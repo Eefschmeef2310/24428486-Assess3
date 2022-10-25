@@ -60,6 +60,9 @@ public class GhostManager : MonoBehaviour
             if(child.GetComponent<ScareManager>().scared)
             {
                 child.GetComponent<ScareManager>().scared = false;
+                Animator animator = child.GetComponent<Animator>();
+                animator.enabled = true;
+                animator.Play("TurnOnTrails");
             }
         }
         ghostTimer.gameObject.SetActive(false);

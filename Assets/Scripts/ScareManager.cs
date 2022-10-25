@@ -16,6 +16,8 @@ public class ScareManager : MonoBehaviour
     public GhostStarter ghostStarter;
     public SpriteRenderer spriteRenderer;
     public Sprite sprite;
+    public AudioSource backgroundMusic;
+    public AudioClip normalMusic;
     void Update()
     {
         if(dead && resetting)
@@ -48,6 +50,9 @@ public class ScareManager : MonoBehaviour
                 ghostController.Reset();
 
                 ghostStarter.enabled = true;
+
+                backgroundMusic.clip = normalMusic;
+                backgroundMusic.Play();
 
                 collide.enabled = true;
                 resetting = false;

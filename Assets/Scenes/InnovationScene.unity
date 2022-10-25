@@ -2144,6 +2144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostManager: {fileID: 2056739044}
   missile: {fileID: 340741645}
+  clip: {fileID: 8300000, guid: 4d94e39c08787c643824968df7d5a29b, type: 3}
 --- !u!82 &1350039394 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7409653574690296371, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
@@ -9901,6 +9902,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 448617056, guid: a5e58db72d7a6374b9624b1b8217d15c, type: 3}
     - target: {fileID: 1972005766486635062, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
+      propertyPath: normalMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 315dba6b9f6f5444ab7f907a60fdefb1, type: 3}
+    - target: {fileID: 1972005766486635062, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
       propertyPath: ghostStarter
       value: 
       objectReference: {fileID: 2056739046}
@@ -9908,6 +9913,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 276385941}
+    - target: {fileID: 1972005766486635062, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 263536591}
     - target: {fileID: 1972005766486635066, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -10024,6 +10033,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 448617056, guid: a5e58db72d7a6374b9624b1b8217d15c, type: 3}
     - target: {fileID: 2522411069918423919, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
+      propertyPath: normalMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 315dba6b9f6f5444ab7f907a60fdefb1, type: 3}
+    - target: {fileID: 2522411069918423919, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
       propertyPath: ghostStarter
       value: 
       objectReference: {fileID: 2056739046}
@@ -10031,6 +10044,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1612203284}
+    - target: {fileID: 2522411069918423919, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 263536591}
     - target: {fileID: 2522411069918423925, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
       propertyPath: tilemap
       value: 
@@ -10110,6 +10127,10 @@ PrefabInstance:
       propertyPath: audioClips.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 9b4a35e66443ab842bfc563a97b2d51d, type: 3}
+    - target: {fileID: 4009403194080247636, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4009403194080247637, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -10164,7 +10185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7409653574690296371, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8095447815271962339, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: m_IsActive
@@ -10198,6 +10219,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 448617056, guid: a5e58db72d7a6374b9624b1b8217d15c, type: 3}
     - target: {fileID: 4892017132074497047, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
+      propertyPath: normalMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 315dba6b9f6f5444ab7f907a60fdefb1, type: 3}
+    - target: {fileID: 4892017132074497047, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
       propertyPath: ghostStarter
       value: 
       objectReference: {fileID: 2056739046}
@@ -10205,6 +10230,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1423353181}
+    - target: {fileID: 4892017132074497047, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 263536591}
     - target: {fileID: 4892017132074497053, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
       propertyPath: tilemap
       value: 
@@ -10333,6 +10362,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 448617056, guid: a5e58db72d7a6374b9624b1b8217d15c, type: 3}
     - target: {fileID: 4920239831816874124, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
+      propertyPath: normalMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 315dba6b9f6f5444ab7f907a60fdefb1, type: 3}
+    - target: {fileID: 4920239831816874124, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
       propertyPath: ghostStarter
       value: 
       objectReference: {fileID: 2056739046}
@@ -10340,6 +10373,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 2090494403}
+    - target: {fileID: 4920239831816874124, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 263536591}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}

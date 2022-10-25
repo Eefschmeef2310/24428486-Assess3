@@ -6,6 +6,7 @@ public class MissileLauncher : MonoBehaviour
 {
     public GhostManager ghostManager;
     public GameObject missile;
+    public AudioClip clip;
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) && ghostManager.pelletMode)
@@ -13,6 +14,7 @@ public class MissileLauncher : MonoBehaviour
             missile.SetActive(true);
             Instantiate(missile, transform.position, Quaternion.identity);
             missile.SetActive(false);
+            AudioSource.PlayClipAtPoint(clip, Vector3.zero);
             ghostManager.exitPelletMode();
         }
     }

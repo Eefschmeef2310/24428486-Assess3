@@ -77,6 +77,7 @@ public class PacStudentController : MonoBehaviour
                     smokes.SetActive(false);
 
                     audioSource.clip = audioClips[1];
+                    audioSource.enabled = true;
                     audioSource.loop = false;
                     audioSource.Play();
                 }
