@@ -40,16 +40,16 @@ public class CherryController : MonoBehaviour
         switch(Random.Range(0,4)) //randomly pick a side, then spawn a cherry at a random spot along that axis
         {
             case 0: //top
-                position = new Vector3(Random.Range(-32.5f, 32.5f), 18.5f);
+                position = new Vector3(Random.Range(-Camera.main.orthographicSize * Camera.main.aspect, Camera.main.orthographicSize * Camera.main.aspect), (Camera.main.orthographicSize * Camera.main.aspect)/2);
                 break;
             case 1: //bottom
-                position = new Vector3(Random.Range(-32.5f, 32.5f), -18.5f);
+                position = new Vector3(Random.Range(-Camera.main.orthographicSize * Camera.main.aspect, Camera.main.orthographicSize * Camera.main.aspect), -(Camera.main.orthographicSize * Camera.main.aspect)/2);
                 break;
             case 2: //left
-                position = new Vector3(-32.5f, Random.Range(-18.5f, 18.5f));
+                position = new Vector3(-Camera.main.orthographicSize * Camera.main.aspect, Random.Range(-(Camera.main.orthographicSize * Camera.main.aspect)/2, (Camera.main.orthographicSize * Camera.main.aspect)/2));
                 break;
             case 3: //right
-                position = new Vector3(32.5f, Random.Range(-18.5f, 18.5f));
+                position = new Vector3(Camera.main.orthographicSize * Camera.main.aspect, Random.Range(-(Camera.main.orthographicSize * Camera.main.aspect)/2, (Camera.main.orthographicSize * Camera.main.aspect)/2));
                 break;
         }
 

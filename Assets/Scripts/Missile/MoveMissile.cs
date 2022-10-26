@@ -10,6 +10,7 @@ public class MoveMissile : MonoBehaviour
     Vector3Int movingDirection;
     public Tilemap tilemap;
     public float speed;
+    public AudioClip clip;
     void Start()
     {
         nextPos = transform.position;
@@ -25,6 +26,7 @@ public class MoveMissile : MonoBehaviour
             }
             else
             {
+                AudioSource.PlayClipAtPoint(clip, Vector3.zero);
                 Destroy(gameObject);
             }
         }

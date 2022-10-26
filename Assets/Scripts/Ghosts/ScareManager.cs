@@ -32,6 +32,7 @@ public class ScareManager : MonoBehaviour
             
             if(transform.position == new Vector3(resetPosition.xPos, -0.5f, 0))
             {
+                ghostStarter.section = 1;
                 animator.SetLayerWeight(0,1);
                 animator.SetLayerWeight(1,0);
                 animator.Play("Down", 0);
@@ -60,8 +61,8 @@ public class ScareManager : MonoBehaviour
             }
             else
             {
-                spriteRenderer.sprite = sprite;
                 animator.enabled = false;
+                spriteRenderer.sprite = sprite;
                 ghostStarter.moveGhost(gameObject, ghost);
             }
         }
@@ -79,8 +80,8 @@ public class ScareManager : MonoBehaviour
 
     public void scaredState()
     {
-        animator.SetLayerWeight(1,1);
         scared = true;
+        animator.SetLayerWeight(1,1);
         animator.Play("Scared", 1);
     }
 }

@@ -7,6 +7,8 @@ public class ExitLevel : MonoBehaviour
 {
     public void ExitScene()
     {
+        Time.timeScale = 1;
+        AudioListener.pause = false;
         SceneManager.LoadScene(0);
     }
     void Update()

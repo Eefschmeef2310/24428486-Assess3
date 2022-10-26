@@ -23,11 +23,7 @@ public class GhostManager : MonoBehaviour
 
         foreach(Transform child in transform)
         {
-            if(child.GetComponent<GhostController>().enabled)
-            {
-                child.GetComponent<ScareManager>().scaredState();
-            }
-            
+            child.GetComponent<ScareManager>().scaredState();
         }
 
         for(int i = 10; i > 3; i--)

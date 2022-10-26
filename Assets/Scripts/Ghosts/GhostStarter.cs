@@ -13,7 +13,7 @@ public class GhostStarter : MonoBehaviour
     public List<float> zPos;
     public List<GhostController> controllers;
     int ghost = 0;
-    int section = 1;
+    [HideInInspector] public int section = 1;
     public float moveSpeed = 3;
 
     public void Start()
@@ -60,7 +60,6 @@ public class GhostStarter : MonoBehaviour
                 if(movingGhost.transform.position == new Vector3(0,1.5f,0))
                 {
                     section++;
-                    movingGhost.transform.position = new Vector3(0,1.5f,0);
                 }
                 else
                 {
@@ -73,7 +72,6 @@ public class GhostStarter : MonoBehaviour
                 if(movingGhost.transform.position == new Vector3(0,3.5f,0))
                 {
                     section++;
-                    movingGhost.transform.position = new Vector3(0,3.5f,0);
                 }
                 else
                 {

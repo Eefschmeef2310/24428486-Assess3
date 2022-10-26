@@ -1121,6 +1121,7 @@ GameObject:
   - component: {fileID: 726763794}
   - component: {fileID: 726763796}
   - component: {fileID: 726763795}
+  - component: {fileID: 726763797}
   m_Layer: 0
   m_Name: Tagline
   m_TagString: Untagged
@@ -1146,7 +1147,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0.0452, y: 43}
-  m_SizeDelta: {x: 800.0455, y: 248.5018}
+  m_SizeDelta: {x: 580.7587, y: 248.5018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726763795
 MonoBehaviour:
@@ -1246,6 +1247,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726763793}
   m_CullTransparentMesh: 1
+--- !u!114 &726763797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726763793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d9f8e2cfde16e4298d22a3299dd900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taglines:
+  - Formerly "PuckStudent", before some teenagers decided it'd be funny to graffiti
+    the name.
+  - Plane and simple fun!
+  - Tank me later
+  - Tanks for playing!
+  - Barrels of fun!
+  - More than 0 copies sold!
+  - Now in 3D! (Presented in glorious 2D)
+  - Rated 7.8 for having "too much water"
+  - Widely loved by over two people!
+  - We filled the full tank!
+  - Stop staring at the tank top!
+  - Tread lightly!
+  - Don't know how to play? Just wing it!
+  - It's a secret to everyone!
+  - LEEROY TANKINS
+  - Sorry, no barrel rolls!
+  - Tankyo Drift!
+  - All your planes are belong to us!
+  - I used to be an adventurer like you, until I took a missile to the wing
+  - Hey you, you're finally awake!
+  - Konami code not supported
+  - Look up Cowboy Bebop's opening song's name
+  - Powered by three hamsters on a treadmill
+  - What is a tank? A miserable little pile of gears!
+  - Praise the Tank!
+  - A tank chooses; a plane obeys.
+  - Tank? TANK? TAAAAAAAAAAAAAAAANK!
+  - NOT a walking simulator!
+  - Gear Up!
+  - Most Outstanding!
+  - Rootin', tootin', tankin' and shootin'!
+  text: {fileID: 726763795}
 --- !u!1 &772528601
 GameObject:
   m_ObjectHideFlags: 0

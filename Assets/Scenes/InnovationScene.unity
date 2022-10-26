@@ -1469,7 +1469,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 00:00:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0d241d1d97f0e1743a2e4109018d6525, type: 2}
   m_sharedMaterial: {fileID: -7537679567453093689, guid: 0d241d1d97f0e1743a2e4109018d6525, type: 2}
@@ -1858,6 +1858,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8535626881868048456, guid: 06ad88891d90a9b4483ea023f9a9618e, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d94e39c08787c643824968df7d5a29b, type: 3}
     - target: {fileID: 8535626881868048456, guid: 06ad88891d90a9b4483ea023f9a9618e, type: 3}
       propertyPath: speed
       value: 10
@@ -9742,6 +9746,7 @@ MonoBehaviour:
   - {fileID: 1423353177}
   - {fileID: 1612203280}
   - {fileID: 2090494399}
+  section: 1
   moveSpeed: 2
 --- !u!1 &2090494389 stripped
 GameObject:
@@ -9895,7 +9900,7 @@ PrefabInstance:
       objectReference: {fileID: 1279766146}
     - target: {fileID: 1972005766486635059, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1972005766486635062, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
       propertyPath: sprite
@@ -10026,7 +10031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2522411069918423912, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2522411069918423919, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
       propertyPath: sprite
@@ -10212,7 +10217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4892017132074497042, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4892017132074497047, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
       propertyPath: sprite
@@ -10347,7 +10352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4920239831816874121, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4920239831816874122, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
       propertyPath: tilemap
