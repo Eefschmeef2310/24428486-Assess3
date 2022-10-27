@@ -14,6 +14,7 @@ public class ScareManager : MonoBehaviour
     public BoxCollider2D collide;
     public GhostController ghostController;
     public GhostStarter ghostStarter;
+    public GhostManager ghostManager;
     public SpriteRenderer spriteRenderer;
     public Sprite sprite;
     public AudioSource backgroundMusic;
@@ -52,8 +53,11 @@ public class ScareManager : MonoBehaviour
 
                 ghostStarter.enabled = true;
 
-                backgroundMusic.clip = normalMusic;
-                backgroundMusic.Play();
+                if(ghostManager.pelletMode)
+                {
+                    backgroundMusic.clip = normalMusic;
+                    backgroundMusic.Play();
+                }
 
                 collide.enabled = true;
                 resetting = false;

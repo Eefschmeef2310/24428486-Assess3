@@ -9920,6 +9920,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 315dba6b9f6f5444ab7f907a60fdefb1, type: 3}
     - target: {fileID: 1972005766486635062, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
+      propertyPath: ghostManager
+      value: 
+      objectReference: {fileID: 2056739044}
+    - target: {fileID: 1972005766486635062, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
       propertyPath: ghostStarter
       value: 
       objectReference: {fileID: 2056739046}
@@ -10050,6 +10054,10 @@ PrefabInstance:
       propertyPath: normalMusic
       value: 
       objectReference: {fileID: 8300000, guid: 315dba6b9f6f5444ab7f907a60fdefb1, type: 3}
+    - target: {fileID: 2522411069918423919, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
+      propertyPath: ghostManager
+      value: 
+      objectReference: {fileID: 2056739044}
     - target: {fileID: 2522411069918423919, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
       propertyPath: ghostStarter
       value: 
@@ -10241,6 +10249,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 315dba6b9f6f5444ab7f907a60fdefb1, type: 3}
     - target: {fileID: 4892017132074497047, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
+      propertyPath: ghostManager
+      value: 
+      objectReference: {fileID: 2056739044}
+    - target: {fileID: 4892017132074497047, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
       propertyPath: ghostStarter
       value: 
       objectReference: {fileID: 2056739046}
@@ -10383,6 +10395,10 @@ PrefabInstance:
       propertyPath: normalMusic
       value: 
       objectReference: {fileID: 8300000, guid: 315dba6b9f6f5444ab7f907a60fdefb1, type: 3}
+    - target: {fileID: 4920239831816874124, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
+      propertyPath: ghostManager
+      value: 
+      objectReference: {fileID: 2056739044}
     - target: {fileID: 4920239831816874124, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
       propertyPath: ghostStarter
       value: 
