@@ -1204,6 +1204,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &507876095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8095447815271962339, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+  m_PrefabInstance: {fileID: 4009403192968203903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1841,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 816229329034937298, guid: 06ad88891d90a9b4483ea023f9a9618e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007848842137392960, guid: 06ad88891d90a9b4483ea023f9a9618e, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3453610805238225567, guid: 06ad88891d90a9b4483ea023f9a9618e, type: 3}
@@ -10088,6 +10097,10 @@ PrefabInstance:
       propertyPath: ghosts
       value: 
       objectReference: {fileID: 2056739045}
+    - target: {fileID: 1576061896, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+      propertyPath: smokes
+      value: 
+      objectReference: {fileID: 507876095}
     - target: {fileID: 1576061896, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: gameWon
       value: 

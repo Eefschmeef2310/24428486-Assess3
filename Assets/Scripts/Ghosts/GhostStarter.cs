@@ -53,6 +53,10 @@ public class GhostStarter : MonoBehaviour
             controllers[ghost].enabled = true;
             controllers[ghost].Reset();
             animators[ghost].enabled = true;
+            if(!scareManagers[ghost].scared)
+            {
+                animators[ghost].SetLayerWeight(1,0);
+            }
         }
         else{
             if(section == 1)

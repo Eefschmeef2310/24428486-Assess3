@@ -21,6 +21,7 @@ public class PacStudentCollisions : MonoBehaviour
     public GameEnd gameWon;
     public GhostStarter ghostStarter;
     public Sprite defaultSprite;
+    public GameObject smokes;
     int hits;
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -178,12 +179,32 @@ public class PacStudentCollisions : MonoBehaviour
     }
     IEnumerator gameComplete()
     {
+        audioSource.Stop();
+        backgroundMusic.Stop();
+        backgroundMusic.enabled = false;
+        timer.enabled = false;
+        animator.Play("Exit Machine", 1); //stop layer 1
+        animator.enabled = false;
+        smokes.SetActive(false);
+
         Time.timeScale = 0.0f;
         yield return new WaitForSecondsRealtime(2); //let the game hang for two seconds, letting the player absorb the impact before losing a life
         Time.timeScale = 1.0f;
 
         turnOffGhosts();
+        cherryController.StopAllCoroutines();
+        cherryController.enabled = false;
+
+        foreach(GameObject collectable in GameObject.FindGameObjectsWithTag("Collectable"))
+        {
+            if(collectable.name == "Cherry(Clone)")
+            {
+                Destroy(collectable);
+            }
+        }
+
         pacStudentController.enabled = false;
+        StopAllCoroutines();
         StartCoroutine(gameWon.gameComplete(true));
 
         yield return null;
