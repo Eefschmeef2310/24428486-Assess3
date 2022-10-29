@@ -10,6 +10,8 @@ public class GameEnd : MonoBehaviour
     public AudioSource audioSource;
     public AudioPlayer audioPlayer;
     public SaveGame saveGame;
+    public TextMeshProUGUI timer;
+    public GhostManager ghostManager;
     public IEnumerator gameComplete(bool winLose)
     {
         TextMeshProUGUI lastText = endText.GetComponent<TextMeshProUGUI>();

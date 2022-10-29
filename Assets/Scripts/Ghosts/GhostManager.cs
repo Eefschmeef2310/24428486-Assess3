@@ -8,6 +8,10 @@ public class GhostManager : MonoBehaviour
     public TextMeshProUGUI ghostTimer;
     public AudioSource backgroundMusic;
     public bool pelletMode = false;
+    void Update()
+    {
+        
+    }
     public void powerPellet()
     {
         pelletMode = true;

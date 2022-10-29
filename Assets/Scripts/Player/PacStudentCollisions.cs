@@ -22,6 +22,8 @@ public class PacStudentCollisions : MonoBehaviour
     public GhostStarter ghostStarter;
     public Sprite defaultSprite;
     public GameObject smokes;
+    public GameObject ghostTimer;
+    public GhostManager ghostManager;
     int hits;
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -182,6 +184,8 @@ public class PacStudentCollisions : MonoBehaviour
         audioSource.Stop();
         backgroundMusic.Stop();
         backgroundMusic.enabled = false;
+        ghostTimer.SetActive(false);
+        ghostManager.StopAllCoroutines();
         timer.enabled = false;
         animator.Play("Exit Machine", 1); //stop layer 1
         animator.enabled = false;

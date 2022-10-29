@@ -510,6 +510,8 @@ MonoBehaviour:
   audioSource: {fileID: 263536591}
   audioPlayer: {fileID: 272665320}
   saveGame: {fileID: 252925836}
+  timer: {fileID: 1484187878}
+  ghostManager: {fileID: 2056739044}
 --- !u!1 &256968389
 GameObject:
   m_ObjectHideFlags: 0
@@ -9846,6 +9848,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1576061896, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+      propertyPath: ghostTimer
+      value: 
+      objectReference: {fileID: 1484187876}
+    - target: {fileID: 1576061896, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+      propertyPath: ghostManager
+      value: 
+      objectReference: {fileID: 2056739044}
     - target: {fileID: 1576061896, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: ghostStarter
       value: 
