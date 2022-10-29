@@ -6,6 +6,10 @@ using TMPro;
 public class Countdown : MonoBehaviour
 {
     public TextMeshProUGUI text;
+    public PacStudentController pacStudentController;
+    public Collider2D collide;
+    public Timer timer;
+    public GhostStarter ghostStarter;
     public void Start()
     {
         text.transform.parent.gameObject.SetActive(true);
@@ -25,6 +29,11 @@ public class Countdown : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
 
         Time.timeScale = 1;
+
+        pacStudentController.enabled = true;
+        collide.enabled = true;
+        timer.enabled = true;
+        ghostStarter.enabled = true;
 
         text.transform.parent.gameObject.SetActive(false);
         AudioListener.pause = false;

@@ -2164,6 +2164,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484187876}
   m_CullTransparentMesh: 1
+--- !u!61 &1583085169 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4922581549439895404, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+  m_PrefabInstance: {fileID: 4009403192968203903}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1583085170 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4009403193339244093, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+  m_PrefabInstance: {fileID: 4009403192968203903}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab5870defbe00343948e2207493912e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1612203270 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2522411069918423907, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
@@ -9323,7 +9339,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943172665}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0b4a336e8f8f524c88f8eb7db014b92, type: 3}
   m_Name: 
@@ -9345,6 +9361,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 338480152}
+  pacStudentController: {fileID: 1583085170}
+  collide: {fileID: 1583085169}
+  timer: {fileID: 1943172668}
+  ghostStarter: {fileID: 2056739046}
 --- !u!114 &1943172670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9420,7 +9440,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056739043}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c24dc3107af7ec4ea1bd2bc0eeaa926, type: 3}
   m_Name: 
@@ -9625,6 +9645,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 315dba6b9f6f5444ab7f907a60fdefb1, type: 3}
     - target: {fileID: 1972005766486635062, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
+      propertyPath: ghostManager
+      value: 
+      objectReference: {fileID: 2056739044}
+    - target: {fileID: 1972005766486635062, guid: 71ea201a66d6ece469ec5d0af0c1d1ff, type: 3}
       propertyPath: ghostStarter
       value: 
       objectReference: {fileID: 2056739046}
@@ -9756,6 +9780,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 315dba6b9f6f5444ab7f907a60fdefb1, type: 3}
     - target: {fileID: 2522411069918423919, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
+      propertyPath: ghostManager
+      value: 
+      objectReference: {fileID: 2056739044}
+    - target: {fileID: 2522411069918423919, guid: 1ea3a7a2ade5c0b438970876e2c8dbd9, type: 3}
       propertyPath: ghostStarter
       value: 
       objectReference: {fileID: 2056739046}
@@ -9803,6 +9831,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2056739045}
     - target: {fileID: 1576061896, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+      propertyPath: smokes
+      value: 
+      objectReference: {fileID: 4009403192968203904}
+    - target: {fileID: 1576061896, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: gameWon
       value: 
       objectReference: {fileID: 252925837}
@@ -9810,6 +9842,10 @@ PrefabInstance:
       propertyPath: countdown
       value: 
       objectReference: {fileID: 1943172669}
+    - target: {fileID: 1576061896, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1576061896, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: ghostStarter
       value: 
@@ -9834,6 +9870,10 @@ PrefabInstance:
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 1691981102}
+    - target: {fileID: 4009403193339244093, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4009403193339244093, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: audioClips.Array.size
       value: 2
@@ -9898,6 +9938,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4922581549439895404, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7409653574690296371, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -9910,6 +9954,11 @@ PrefabInstance:
     - {fileID: 4009403192968203905, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+--- !u!1 &4009403192968203904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8095447815271962339, guid: 2599ab3847011714f8c14bc85063f0a1, type: 3}
+  m_PrefabInstance: {fileID: 4009403192968203903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4892017133488853316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9934,6 +9983,10 @@ PrefabInstance:
       propertyPath: normalMusic
       value: 
       objectReference: {fileID: 8300000, guid: 315dba6b9f6f5444ab7f907a60fdefb1, type: 3}
+    - target: {fileID: 4892017132074497047, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
+      propertyPath: ghostManager
+      value: 
+      objectReference: {fileID: 2056739044}
     - target: {fileID: 4892017132074497047, guid: 8325620434e1ca24d89d86c0c53dc5fb, type: 3}
       propertyPath: ghostStarter
       value: 
@@ -10077,6 +10130,10 @@ PrefabInstance:
       propertyPath: normalMusic
       value: 
       objectReference: {fileID: 8300000, guid: 315dba6b9f6f5444ab7f907a60fdefb1, type: 3}
+    - target: {fileID: 4920239831816874124, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
+      propertyPath: ghostManager
+      value: 
+      objectReference: {fileID: 2056739044}
     - target: {fileID: 4920239831816874124, guid: 9582c5b3fa19ed94c816eb436927ba6f, type: 3}
       propertyPath: ghostStarter
       value: 

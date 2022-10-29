@@ -65,7 +65,7 @@ public class PacStudentController : MonoBehaviour
             else
             {
                 nextPos = new Vector3Int((int)(currentInput.x - 0.5f) + movingDirection.x, (int)(currentInput.y - 0.5f) + movingDirection.y); //this time, check if tile in direction of travel is valid
-                if(tilemap.GetTile(nextPos) == null || tilemap.GetTile(nextPos).name == "Pellet" || tilemap.GetTile(nextPos).name == "PowerPellet") //tile in direction is valid
+                if(tilemap.GetTile(nextPos) == null || tilemap.GetTile(nextPos).name == "Pellet" || tilemap.GetTile(nextPos).name == "PowerPellet"|| tilemap.GetTile(nextPos).name == "PacValid") //tile in direction is valid
                 {
                     currentInput += movingDirection; //"KEEP MOVING FORWARD" (Meet The Robinsons, 2007)
                 }
