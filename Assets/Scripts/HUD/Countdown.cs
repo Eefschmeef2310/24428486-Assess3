@@ -13,6 +13,10 @@ public class Countdown : MonoBehaviour
     public void Start()
     {
         text.transform.parent.gameObject.SetActive(true);
+        pacStudentController.enabled = false;
+        collide.enabled = false;
+        timer.enabled = false;
+        ghostStarter.enabled = false;
         StartCoroutine(StartGame());
     }
 

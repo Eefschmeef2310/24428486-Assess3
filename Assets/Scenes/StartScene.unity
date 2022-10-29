@@ -1169,8 +1169,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Formerly "PuckStudent", before some teenagers decided it'd be funny to
-    graffiti the name.
+  m_text: Rootin', tootin', tankin' and shootin'!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0d241d1d97f0e1743a2e4109018d6525, type: 2}
   m_sharedMaterial: {fileID: -7537679567453093689, guid: 0d241d1d97f0e1743a2e4109018d6525, type: 2}

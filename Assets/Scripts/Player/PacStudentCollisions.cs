@@ -192,7 +192,6 @@ public class PacStudentCollisions : MonoBehaviour
         Time.timeScale = 1.0f;
 
         turnOffGhosts();
-        cherryController.StopAllCoroutines();
         cherryController.enabled = false;
 
         foreach(GameObject collectable in GameObject.FindGameObjectsWithTag("Collectable"))
