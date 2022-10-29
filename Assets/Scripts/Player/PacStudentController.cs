@@ -111,6 +111,7 @@ public class PacStudentController : MonoBehaviour
         {
             isMoving = true;
 
+            audioSource.enabled = true;
             audioSource.clip = audioClips[0];
             audioSource.loop = true;
             audioSource.Play();

@@ -105,7 +105,7 @@ public class PacStudentCollisions : MonoBehaviour
 
         turnOffGhosts();
 
-        cherryController.StopAllCoroutines();
+        cherryController.CancelInvoke("spawnCherry");
         cherryController.enabled = false;
 
         foreach(GameObject collectable in GameObject.FindGameObjectsWithTag("Collectable"))
