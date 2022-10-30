@@ -191,6 +191,11 @@ public class GhostController : MonoBehaviour
                 
             }
         }
+
+        if(valids.Count == 0)
+        {
+            valids.Add(movingDirection);
+        }
         return valids;
     }
 

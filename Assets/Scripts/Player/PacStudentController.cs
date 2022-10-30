@@ -24,6 +24,7 @@ public class PacStudentController : MonoBehaviour
         audioSource.clip = null;
         audioSource.Stop();
         animator.enabled = false;
+        movingDirection = Vector3Int.zero;
     }
 
     void Update()

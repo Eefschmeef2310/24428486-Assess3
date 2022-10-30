@@ -110,6 +110,9 @@ public class PacStudentCollisions : MonoBehaviour
         cherryController.CancelInvoke("spawnCherry");
         cherryController.enabled = false;
 
+        ghostTimer.SetActive(false);
+        ghostManager.StopAllCoroutines();
+
         foreach(GameObject collectable in GameObject.FindGameObjectsWithTag("Collectable"))
         {
             if(collectable.name == "Cherry(Clone)")
@@ -120,9 +123,11 @@ public class PacStudentCollisions : MonoBehaviour
 
         audioSource.clip = deathSound;
         audioSource.loop = false;
-        animator.Play("Exit Machine", 1); //stop layer 1
         audioSource.Play();
 
+        animator.enabled = true;
+        animator.speed = 1;
+        animator.SetLayerWeight(1,0);
         animator.Play("PacDeath", 0);
 
         lives.RemoveLife();
@@ -142,7 +147,9 @@ public class PacStudentCollisions : MonoBehaviour
     {
         transform.position = new Vector3(-12.5f, 13.5f);
 
+        animator.SetLayerWeight(1,1);
         animator.Play("Rolling", 0);
+
         gameObject.GetComponent<SpriteRenderer>().sprite = defaultSprite;
         cherryController.enabled = true;
 
@@ -196,6 +203,8 @@ public class PacStudentCollisions : MonoBehaviour
         Time.timeScale = 1.0f;
 
         turnOffGhosts();
+
+        cherryController.CancelInvoke("spawnCherry");
         cherryController.enabled = false;
 
         foreach(GameObject collectable in GameObject.FindGameObjectsWithTag("Collectable"))
